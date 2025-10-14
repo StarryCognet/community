@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6586636",
+      "name": "我的房屋",
+      "font_class": "wodefangwu",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "15737033",
+      "name": "楼盘数据",
+      "font_class": "loupanshuju",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "33702382",
+      "name": "jurassic_role",
+      "font_class": "jurassic_role",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "5053498",
+      "name": "房间管理",
+      "font_class": "fangjianguanli",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
       "icon_id": "32731484",
       "name": "下载",
       "font_class": "xiazai",

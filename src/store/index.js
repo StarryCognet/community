@@ -7,35 +7,29 @@ import createVuexAlong from 'vuex-along'
 
 export default new Vuex.Store({
   state: {
-    menu:[],
-    token:null
+    menu: [],
+    token: null,
   },
   getters: {
     getTopMenu(state) {
-      return state.menu.filter( (item) => item.pid == 0 && item.postion == 'top' );
-    }
+      return state.menu.filter((item) => item.pid == 0 && item.postion == 'top')
+    },
   },
   mutations: {
-    setMenu(state,menu){
-      state.menu=menu;
+    setMenu(state, menu) {
+      state.menu = menu
     },
-    setToken(state,token){
-      state.token=token;
-    }
+    setToken(state, token) {
+      state.token = token
+    },
   },
   actions: {
-    async loginAsync(context,logininfo){
-      
+    async loginAsync(context, logininfo) {
       // 将menu和token保存到vuex中
-      context.commit("setMenu",logininfo.menu);
-      context.commit("setToken",logininfo.token);
-       
-      
-    }
+      context.commit('setMenu', logininfo.menu)
+      context.commit('setToken', logininfo.token)
+    },
   },
-  modules: {
-  },
-  plugins: [
-    createVuexAlong()
-  ]
+  modules: {},
+  plugins: [createVuexAlong()],
 })

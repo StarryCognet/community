@@ -7,6 +7,4 @@
 
 <style lang="less">
 @import url("../src/assets/css/common.less");
-
-
 </style>

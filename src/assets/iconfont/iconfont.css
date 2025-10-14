@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 5040133 */
-  src: url('iconfont.woff2?t=1760429941161') format('woff2'),
-       url('iconfont.woff?t=1760429941161') format('woff'),
-       url('iconfont.ttf?t=1760429941161') format('truetype');
+  src: url('iconfont.woff2?t=1760442044950') format('woff2'),
+       url('iconfont.woff?t=1760442044950') format('woff'),
+       url('iconfont.ttf?t=1760442044950') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wodefangwu:before {
+  content: "\e610";
+}
+
+.icon-loupanshuju:before {
+  content: "\e62c";
+}
+
+.icon-jurassic_role:before {
+  content: "\e60a";
+}
+
+.icon-fangjianguanli:before {
+  content: "\e61c";
 }
 
 .icon-xiazai:before {
