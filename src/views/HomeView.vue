@@ -3,47 +3,51 @@
     <el-container>
       <el-header>
         <img class="logo" src="../assets/images/logo.jpg" alt="" />
-        <i>首页</i>
+        <i class="iconfont icon-shouye">首页</i>
         <p>admin,上午好！今天你看上去好精神哦！</p>
+        <div class="top-r">
+          <i class="iconfont icon-shezhi">设置</i>
+          <i class="iconfont icon-tuichudenglu1">退出登录</i>
+        </div>
       </el-header>
       <el-container>
         <el-aside width="200px">
           <ul>
             <li>
-              <i class="iconfont icon-jiaofeijilu"></i>
+              <i class="iconfont icon-qitafeiyong"></i>
               <p>缴费</p>
             </li>
             <li>
-              <i class="iconfont icon-yonghu-liangren_users-fill"></i>
-              <p>缴费</p>
+              <i class="iconfont icon-renshu"></i>
+              <p>居民</p>
             </li>
             <li>
-              <i class="iconfont icon-baoxiu"></i>
-              <p>缴费</p>
+              <i class="iconfont icon-wuyeguanli"></i>
+              <p>保修</p>
             </li>
             <li>
               <i class="iconfont icon-complain"></i>
-              <p>缴费</p>
+              <p>投诉</p>
             </li>
             <li>
-              <i class="iconfont icon-yuangong"></i>
-              <p>缴费</p>
+              <i class="iconfont icon-qiyeguanli_yuangongguanli"></i>
+              <p>职员</p>
             </li>
             <li>
               <i class="iconfont icon-gonggao"></i>
-              <p>缴费</p>
+              <p>公告</p>
             </li>
             <li>
               <i class="iconfont icon-mendian"></i>
-              <p>缴费</p>
+              <p>门店</p>
             </li>
             <li>
               <i class="iconfont icon-tupian"></i>
-              <p>缴费</p>
+              <p>图片</p>
             </li>
             <li>
-              <i class="iconfont icon-yonghu"></i>
-              <p>缴费</p>
+              <i class="iconfont icon-guanliyuan1"></i>
+              <p>会员</p>
             </li>
           </ul>
         </el-aside>
@@ -110,21 +114,23 @@
               </div>
             </el-card>
             <div class="ins-top">
-              <div class="top-title">
+              <div class="top-title" style="position: relative;">
                 <h2>数据显示</h2>
-                <div>111</div>
-                <el-radio-group v-model="tabPosition" style="margin-bottom: 30px">
+                <div><img src="../assets/images/shuju1.png" alt="">保修总数 <img src="../assets/images/shuju2.png" alt="">投诉总数</div>
+                <el-radio-group v-model="tabPosition" style="margin-bottom: 30px; margin-right: 25px;">
                   <el-radio-button label="right">最近30天</el-radio-button>
                   <el-radio-button label="bottom">最近半年</el-radio-button>
                   <el-radio-button label="left">本年</el-radio-button>
                 </el-radio-group>
+                <i style="position: absolute; right: 0;" class="iconfont icon-xiazai"></i>
               </div>
 
-              <el-tabs :tab-position="tabPosition" style="height: 200px">
-                <el-tab-pane label="用户管理">用户1管理</el-tab-pane>
+              <el-tabs :tab-position="tabPosition" >
+                <!-- <el-tab-pane label="用户管理">用户1管理</el-tab-pane>
                 <el-tab-pane label="配置管理">配置管理</el-tab-pane>
                 <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-                <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
+                <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane> -->
+                <img  src="../assets/images/shuju.png" alt="">
               </el-tabs>
             </div>
           </div>
