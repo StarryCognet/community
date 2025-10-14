@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.home {
+  height: 100%;
+}
+.el-header,
+.el-footer {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.el-header .logo,
+.el-footer .logo {
+  width: 130px;
+  height: 40px;
+}
+.el-header i,
+.el-footer i {
+  font-size: 17px;
+  padding: 8px;
+}
+.el-header p,
+.el-footer p {
+  font-size: 17px;
+}
+.el-header {
+  z-index: 4;
+  width: 100% !important;
+  position: fixed;
+}
+.el-header .top-r {
+  position: absolute;
+  right: 0;
+}
+.el-header .top-r i {
+  transition: 0.4s ease;
+}
+.el-header .top-r i:hover {
+  background-color: #b1b1b1;
+  border-radius: 25px;
+}
+.el-header .top-r i:active {
+  background-color: #818181;
+  border-radius: 30px;
+}
+.el-aside {
+  z-index: 3;
+  padding-top: 60px;
+  position: fixed;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  width: 90px !important;
+  height: 100% !important;
+}
+.el-aside ul li {
+  transition: 0.3s ease;
+  padding: 16px 30px;
+}
+.el-aside ul li i {
+  font-size: 25px;
+  color: #727e97;
+}
+.el-aside ul li:nth-child(3) i {
+  font-size: 32px;
+}
+.el-aside ul li:hover {
+  background-color: #b1b1b1;
+  border-radius: 25px;
+}
+.el-aside ul li:active {
+  background-color: #818181;
+  border-radius: 30px;
+}
+.el-main {
+  margin: 60px 0 0 90px;
+  background-color: #fff;
+  color: #333;
+  height: 100% !important;
+  display: flex;
+}
+.el-main .left {
+  width: 72%;
+}
+.el-main .right {
+  width: 28%;
+}
+.el-main .right a {
+  color: #093de9;
+  text-decoration: none;
+}
+.el-main .right .text span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: nowrap;
+}
+.el-main .text {
+  font-size: 14px;
+}
+.el-main .item {
+  margin-bottom: 18px;
+}
+.el-main .clearfix:before,
+.el-main .clearfix:after {
+  display: table;
+  content: '';
+}
+.el-main .clearfix:after {
+  clear: both;
+}
+.el-main .box-card {
+  margin: 20px;
+}
+.el-main .box-card .nr {
+  border: 1px solid #c4c4c4;
+  display: flex;
+  justify-content: space-between;
+}
+.el-main .box-card .nr .bor p:not(p:nth-child(1)) {
+  margin-left: 20px;
+  border-left: 1px solid #c4c4c4;
+}
+.el-main .box-card .nr div {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+}
+.el-main .box-card .nr div p {
+  padding: 0 10px;
+  margin: 10px 0;
+}
+.el-main .box-card .nr div p span {
+  color: red;
+  font-size: 25px;
+}
+.el-main .ins-top {
+  position: relative;
+  margin: 20px;
+}
+.el-main .ins-top .top-title {
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+.el-main .ins-top .top-title .el-radio-group {
+  position: relative;
+  top: 15px;
+}
+.el-main .ins-top .el-tabs {
+  padding-top: 60px;
+}
+body > .el-container {
+  margin-bottom: 40px;
+}
+.el-container {
+  height: 100% !important;
+}
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
