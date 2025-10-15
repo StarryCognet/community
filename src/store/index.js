@@ -25,6 +25,10 @@ export default new Vuex.Store({
     setToken(state, token) {
       state.token = token
     },
+    clearState(state) {
+      state.menu = []
+      state.token = null
+    }
   },
   actions: {
     async loginAsync(context, logininfo) {
@@ -32,6 +36,9 @@ export default new Vuex.Store({
       context.commit('setMenu', logininfo.menu)
       context.commit('setToken', logininfo.token)
     },
+    logout(context) {
+      context.commit('clearState')
+    }
   },
   modules: {},
   plugins: [createVuexAlong()],

@@ -12,7 +12,7 @@
           <el-dropdown-item v-for="(item,index) in getTopMenu" :key="index" :icon="'iconfont' + item.ico"><i :class="['iconfont', item.ico]"></i>{{item.name.replace(/管理管理/g,'管理')}}</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <i class="iconfont icon-tuichudenglu1">退出登录</i>
+      <i class="iconfont icon-tuichudenglu1" @click="logout">退出登录</i>
     </div>
   </el-header>
 </template>
@@ -24,7 +24,18 @@ export default {
   data() {
     return {}
   },
-  methods: {},
+  methods: {
+    go(url) {
+      this.$router.push(url)
+    },
+    logout() {
+      // this.$store.dispatch('logoutAsync')
+      // this.$router.push('/login')
+      this.$store.dispatch('logoutAsync')
+      localStorage.clear()
+      this.$router.push('/')
+    }
+  },
   created() {
     // const topMenu = 
   },
