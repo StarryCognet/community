@@ -14,6 +14,9 @@ export default new Vuex.Store({
     getTopMenu(state) {
       return state.menu.filter((item) => item.pid == 0 && item.postion == 'top')
     },
+    getLeftMenu(state) {
+      return state.menu.filter((item) => item.pid == 0 && item.postion == 'left')
+    },
   },
   mutations: {
     setMenu(state, menu) {

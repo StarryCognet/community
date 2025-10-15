@@ -1,6 +1,6 @@
 <template>
   <el-aside width="200px">
-    <ul>
+    <!-- <ul>
       <li>
         <i class="iconfont icon-qitafeiyong"></i>
         <p>缴费</p>
@@ -37,18 +37,33 @@
         <i class="iconfont icon-guanliyuan1"></i>
         <p>会员</p>
       </li>
+    </ul> -->
+    <ul>
+      <li v-for="(item, index) in getLeftMenu" :key="index">
+        <i :class="['iconfont', item.ico]"></i>
+        <p>{{ item.name.substr(0, 2) }}</p>
+      </li>
     </ul>
   </el-aside>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name: 'HomeView',
+  name: 'AsideView',
+  
   data() {
-    return {}
+    return {
+      tabPosition: 'left',
+    }
   },
   methods: {},
-  created() {},
+  created() { },
+      computed: {
+        ...mapGetters([
+            'getLeftMenu'
+        ])
+    },
 }
 </script>
 
