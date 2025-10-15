@@ -36,8 +36,12 @@ export default new Vuex.Store({
       context.commit('setMenu', logininfo.menu)
       context.commit('setToken', logininfo.token)
     },
-    logout(context) {
-      context.commit('clearState')
+    logoutAsync(context) {
+      try {
+        context.commit('clearState')
+      } catch (error) {
+        Vue.prototype.$message.error(error.message)
+      }
     }
   },
   modules: {},

@@ -9,7 +9,9 @@
         <i class="iconfont icon-shezhi">设置</i>
         <!-- <span class="el-dropdown-link"> 下拉菜单<i class="el-icon-arrow-down el-icon--right"></i> </span> -->
         <el-dropdown-menu slot="dropdown" style="padding: 10px">
-          <el-dropdown-item v-for="(item,index) in getTopMenu" :key="index" :icon="'iconfont' + item.ico"><i :class="['iconfont', item.ico]"></i>{{item.name.replace(/管理管理/g,'管理')}}</el-dropdown-item>
+          <el-dropdown-item v-for="(item, index) in getTopMenu" :key="index" :icon="'iconfont' + item.ico"
+            ><i :class="['iconfont', item.ico]"></i>{{ item.name.replace(/管理管理/g, '管理') }}</el-dropdown-item
+          >
         </el-dropdown-menu>
       </el-dropdown>
       <i class="iconfont icon-tuichudenglu1" @click="logout">退出登录</i>
@@ -18,31 +20,48 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters,mapActions } from 'vuex'
 export default {
   name: 'HomeView',
   data() {
     return {}
   },
   methods: {
+    ...mapActions(['logoutAsync']),
     go(url) {
       this.$router.push(url)
     },
     logout() {
+      this.$confirm('是否继续退出登录？', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning',
+      })
+        .then(async() => {
+          try {
+            await this.logoutAsync()
+            localStorage.clear()
+            this.$router.push('/')
+          } catch(error) {
+            this.$message.error('退出失败，请重新退出登录')
+          }
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消退出',
+          })
+        })
       // this.$store.dispatch('logoutAsync')
       // this.$router.push('/login')
-      this.$store.dispatch('logoutAsync')
-      localStorage.clear()
-      this.$router.push('/')
-    }
+    },
   },
   created() {
-    // const topMenu = 
+    // const topMenu =
   },
   computed: {
-    ...mapGetters(['getTopMenu'])
-
-  }
+    ...mapGetters(['getTopMenu']),
+  },
 }
 </script>
 
