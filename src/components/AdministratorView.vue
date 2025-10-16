@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="container" style="width: 100%; height: 100%;"> -->
+  <div class="container">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
         <span class="active">管理员列表</span>
@@ -8,25 +8,17 @@
       <el-row>
         <el-col :span="24">
           <span>关键字：</span>
-          <el-input 
-          class="searchInp"
-           placeholder="请输入内容"
-           v-model="query.key"
-           ></el-input>
+          <el-input class="searchInp" placeholder="请输入内容" v-model="query.key"></el-input>
           <el-button type="primary" class="searchbtn" size="small" @click="search">查询</el-button>
         </el-col>
       </el-row>
       <el-row :gutter="10" class="btns">
-        <el-button type="primary" class="searchbtn" size="small">添加</el-button>
+        <el-button @click="dialogVisible = true" type="primary" class="searchbtn" size="small">添加</el-button>
       </el-row>
 
       <!--  表格 -->
 
-      <BaseTable 
-        :tableColumn="tableColumn" 
-        :tableData="tableData" 
-        :loading="loading">
-      </BaseTable>
+      <BaseTable :tableColumn="tableColumn" :tableData="tableData" :loading="loading"> </BaseTable>
 
       <!-- 分页 -->
       <el-pagination
@@ -41,128 +33,135 @@
       >
       </el-pagination>
     </el-card>
-  <!-- </div> -->
+    <!-- 添加 -->
+    <DialogAdministrator :dialogVisible="dialogVisible" @handleCancel="handleCancel"></DialogAdministrator>
+  </div>
 </template>
 
 <script>
-import { list } from "../api/administrator";
-import BaseTable from'@/components/BaseTable.vue'
+import { list } from '../api/administrator'
+import BaseTable from '@/components/BaseTable.vue'
+import DialogAdministrator from '@/components/DialogAdministrator.vue'
 export default {
-  name: "AdministratorView",
+  name: 'AdministratorView',
   components: {
     BaseTable,
+    DialogAdministrator,
   },
   data() {
     return {
-        loading: true,
+      dialogVisible: false,
+      loading: true,
       query: {
         page: 1,
         psize: 8,
-        key: "",
+        key: '',
       },
       counts: 0,
-      tableColumn:[
+      tableColumn: [
         {
-          prop: "id",
-          label: "ID",
+          prop: 'id',
+          label: 'ID',
           width: 180,
         },
         {
-          prop: "username",
-          label: "登录账号",
+          prop: 'username',
+          label: '登录账号',
           width: 180,
         },
         {
-          prop: "name",
-          label: "姓名",
+          prop: 'name',
+          label: '姓名',
         },
         {
-          prop: "tel",
-          label: "手机号",
+          prop: 'tel',
+          label: '手机号',
         },
         {
-          prop: "typeName",
-          label: "类型",
+          prop: 'typeName',
+          label: '类型',
         },
-
       ],
       gridData: [],
       dialogTableVisible: false,
       dialogFormVisible: false,
       form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
         delivery: false,
         type: [],
-        resource: "",
-        desc: "",
+        resource: '',
+        desc: '',
       },
-      formLabelWidth: "120px",
+      formLabelWidth: '120px',
 
       currentPage1: 5,
       currentPage2: 5,
       currentPage3: 5,
       currentPage4: 4,
       formInline: {
-        user: "",
-        region: "",
+        user: '',
+        region: '',
       },
       tableData: [],
       multipleSelection: [],
-    };
+    }
   },
 
   methods: {
+    handleCancel(dialogVisible) {
+      this.dialogVisible = dialogVisible
+    },
     async getList() {
-      this.loading = true;
+      this.loading = true
       try {
-        let {data:{counts,list:listData}} = await list(this.query);
-        this.counts = counts;
-        this.tableData = listData;
-        this.loading = false;
-        console.log('获取到的数据:', listData);
+        let {
+          data: { counts, list: listData },
+        } = await list(this.query)
+        this.counts = counts
+        this.tableData = listData
+        this.loading = false
+        console.log('获取到的数据:', listData)
       } catch (error) {
-        console.error('获取数据失败:', error);
+        console.error('获取数据失败:', error)
       }
     },
     onSubmit() {
-      console.log("查询表单提交:", this.formInline);
+      console.log('查询表单提交:', this.formInline)
       // 这里可以添加实际的查询逻辑
     },
     handleSelectionChange(val) {
-      this.multipleSelection = val;
-      console.log("选中项发生变化:", val);
+      this.multipleSelection = val
+      console.log('选中项发生变化:', val)
     },
     handleEdit(index, row) {
-      console.log("编辑操作:", index, row);
+      console.log('编辑操作:', index, row)
       // 这里可以添加编辑逻辑
     },
     handleDelete(index, row) {
-      console.log("删除操作:", index, row);
+      console.log('删除操作:', index, row)
       // 这里可以添加删除逻辑
     },
     handleSizeChange(val) {
-      this.query.psize = val;
-      this.query.page = 1; // 重置到第一页
-      this.getList();
-
+      this.query.psize = val
+      this.query.page = 1 // 重置到第一页
+      this.getList()
     },
     handleCurrentChange(val) {
-      this.query.page = val;
-      this.getList();
+      this.query.page = val
+      this.getList()
     },
-    search(){
-      this.query.page = 1;
-      this.getList();
-    },
+    search() {
+      this.query.page = 1 // 查询时重置到第一页
+      this.getList()
+    }
   },
-
-  created() {
-    this.getList();
+  mounted() {
+    this.getList()
   },
-};
+}
 </script>
 
 <style lang="less" scoped>
