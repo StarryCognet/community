@@ -108,7 +108,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      tabPosition: 'right'
+    }
+  }
+}
 </script>
 
 <style lang="less" scoped>

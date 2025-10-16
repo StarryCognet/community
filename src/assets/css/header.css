@@ -22,7 +22,8 @@
 .el-header i,
 .el-footer i {
   font-size: 17px;
-  padding: 8px;
+  padding: 0 8px;
+  position: relative;
 }
 .el-header p,
 .el-footer p {

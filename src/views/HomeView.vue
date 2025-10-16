@@ -22,9 +22,7 @@ import AsideView from '@/components/AsideView.vue';
 export default {
   name: 'HomeView',
   data() {
-    return {
-      tabPosition: 'left',
-    }
+    return {    }
   },
   components: {
     HeaderView,
