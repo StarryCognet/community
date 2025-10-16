@@ -118,5 +118,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import url(../assets/css/aside.less);
+@import url(../assets/css/main.less);
 </style>

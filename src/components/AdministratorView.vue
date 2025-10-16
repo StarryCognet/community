@@ -1,6 +1,6 @@
 <template>
-  <div class="container" style="width: 100%; height: 100%">
-    <el-card class="box-card" style="height: 100%">
+  <!-- <div class="container" style="width: 100%; height: 100%"> -->
+    <el-card class="box-card">
       <div slot="header" class="clearfix">
         <span class="active">管理员列表</span>
       </div>
@@ -38,14 +38,14 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="query.page"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
+        :page-sizes="[5, 10, 20, 50]"
+        :page-size="query.psize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="counts"
       >
       </el-pagination>
     </el-card>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -56,7 +56,7 @@ export default {
     return {
       query: {
         page: 2,
-        psize: 5,
+        psize: 10,
         key: '',
       },
       counts: 0,
@@ -116,6 +116,9 @@ export default {
     },
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`)
+      this.query.psize = val
+      this.query.page = 1 // 重置到第一页
+      this.getList()
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`)

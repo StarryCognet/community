@@ -5,44 +5,12 @@
 .home {
   height: 100%;
 }
-.el-aside {
-  z-index: 3;
-  padding-top: 60px;
-  position: fixed;
-  background-color: #f4f4f4;
-  color: #333;
-  text-align: center;
-  width: 90px !important;
-  height: 100% !important;
-}
-.el-aside ul li {
-  transition: 0.3s ease;
-  padding: 16px 30px;
-}
-.el-aside ul li i {
-  font-size: 25px;
-  color: #727e97;
-}
-.el-aside ul li:nth-child(3) i {
-  font-size: 32px;
-}
-.el-aside ul li:hover {
-  background-color: #b1b1b1;
-  border-radius: 25px;
-}
-.el-aside ul li:active {
-  background-color: #818181;
-  border-radius: 30px;
-}
-.el-main .main {
-  display: flex;
-}
 .el-main {
-  margin: 100px 0 0 100px;
+  margin-left: 100px;
+  padding: 20px;
   background-color: #fff;
   color: #333;
   height: 100% !important;
-  display: flex;
 }
 .el-main .left {
   width: 72%;
@@ -122,6 +90,9 @@ body > .el-container {
 }
 .el-container {
   height: 100% !important;
+}
+.el-container .el-container {
+  padding-top: 60px;
 }
 .el-container:nth-child(5) .el-aside,
 .el-container:nth-child(6) .el-aside {
