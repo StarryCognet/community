@@ -1,15 +1,15 @@
 <template>
   <el-header>
     <img class="logo" src="../assets/images/logo.jpg" alt="" />
-    <i class="iconfont icon-shouye">首页</i>
+    <i class="iconfont icon-shouye" @click="$router.push('/home')">首页</i>
     <p>admin,上午好！今天你看上去好精神哦！</p>
     <div class="top-r">
       <!-- {{ getTopMenu }} -->
-      <el-dropdown trigger="click">
+      <el-dropdown trigger="click" @command="go">
         <i class="iconfont icon-shezhi">设置</i>
         <!-- <span class="el-dropdown-link"> 下拉菜单<i class="el-icon-arrow-down el-icon--right"></i> </span> -->
         <el-dropdown-menu slot="dropdown" style="padding: 10px">
-          <el-dropdown-item v-for="(item, index) in getTopMenu" :key="index" :icon="'iconfont' + item.ico"
+          <el-dropdown-item v-for="(item, index) in getTopMenu" :key="index" :icon="'iconfont' + item.ico" :command="item.url"
             ><i :class="['iconfont', item.ico]"></i>{{ item.name.replace(/管理管理/g, '管理') }}</el-dropdown-item
           >
         </el-dropdown-menu>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { mapGetters,mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'HomeView',
   data() {
@@ -37,12 +37,12 @@ export default {
         cancelButtonText: '取消',
         type: 'warning',
       })
-        .then(async() => {
+        .then(async () => {
           try {
             await this.logoutAsync()
             localStorage.clear()
             this.$router.push('/')
-          } catch(error) {
+          } catch (error) {
             this.$message.error('退出失败，请重新退出登录')
           }
         })

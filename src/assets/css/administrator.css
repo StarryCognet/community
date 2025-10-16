@@ -1,17 +1,12 @@
-.block {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
+.searchInp {
+  width: 200px;
 }
-.el-table .el-button:nth-child(1) {
-  position: absolute;
-  right: 70px;
-  top: 12px;
+.searchbtn {
+  margin-left: 10px;
 }
-.el-table .el-button:nth-child(2) {
-  position: absolute;
-  top: 12px;
-  right: 0;
+.btns {
+  margin: 20px 0;
+}
+.pagination {
+  margin-top: 20px;
 }

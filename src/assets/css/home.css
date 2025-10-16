@@ -28,20 +28,6 @@
 .el-footer p {
   font-size: 17px;
 }
-.el-header i,
-.el-footer i {
-  transition: 0.4s ease;
-}
-.el-header i:hover,
-.el-footer i:hover {
-  background-color: #b1b1b1;
-  border-radius: 25px;
-}
-.el-header i:active,
-.el-footer i:active {
-  background-color: #818181;
-  border-radius: 30px;
-}
 .el-header {
   z-index: 4;
   width: 100% !important;
@@ -91,8 +77,11 @@
   background-color: #818181;
   border-radius: 30px;
 }
+.el-main .main {
+  display: flex;
+}
 .el-main {
-  margin: 60px 0 0 90px;
+  margin: 100px 0 0 100px;
   background-color: #fff;
   color: #333;
   height: 100% !important;
@@ -154,21 +143,21 @@
   color: red;
   font-size: 25px;
 }
-.el-main .ins-top {
+.el-main .box-card .ins-top {
   position: relative;
   margin: 20px;
 }
-.el-main .ins-top .top-title {
+.el-main .box-card .ins-top .top-title {
   display: flex;
   height: 40px;
   justify-content: space-between;
   align-items: center;
 }
-.el-main .ins-top .top-title .el-radio-group {
+.el-main .box-card .ins-top .top-title .el-radio-group {
   position: relative;
   top: 15px;
 }
-.el-main .ins-top .el-tabs {
+.el-main .box-card .ins-top .el-tabs {
   padding-top: 60px;
 }
 body > .el-container {

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Loginview from '../views/Loginview.vue'
+import AdministratorView from '../components/AdministratorView.vue'
 
 Vue.use(VueRouter)
 
@@ -14,16 +15,28 @@ const routes = [
     path: '/home',
     name: 'home',
     component: () => import('../views/HomeView.vue'),
+    children: [
+      {
+        path: '/home',
+        name: 'MainView',
+        component: () => import('../components/MainView.vue'),
+      },
+      {
+        path: '/administrator',
+        name: 'administrator',
+        component: AdministratorView,
+      },
+    ],
 
     // component:Loginview
   },
-  {
-    path: '/administrator',
-    name: 'administrator',
-    component: () => import('../components/AdministratorView.vue'),
+  // {
+  //   path: '/administrator',
+  //   name: 'administrator',
+  //   component: () => import('../components/AdministratorView.vue'),
 
-    // component:Loginview
-  },
+  //   // component:Loginview
+  // },
   {
     path: '/about',
     name: 'about',

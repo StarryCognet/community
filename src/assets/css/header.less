@@ -5,6 +5,16 @@
 .home {
   height: 100%;
 }
+// .haeder{
+//   border: 1px solid #000;
+//   width: 100%;
+//   height: 200px;
+//   padding: 50px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+
+// }
 
 .el-header,
 .el-footer {
@@ -26,15 +36,25 @@
   p {
     font-size: 17px;
   }
+  i {
+    transition: 0.4s ease;
+  }
+  i:hover {
+    background-color: #b1b1b1;
+    border-radius: 25px;
+  }
+  i:active {
+    background-color: #818181;
+    border-radius: 30px;
+  }
 }
 .el-header {
   z-index: 4;
   width: 100% !important;
   position: fixed;
   .top-r {
-    i{
+    i {
       transition: 0.4s ease;
-
     }
     i:hover {
       background-color: #b1b1b1;
@@ -67,7 +87,7 @@
         color: #727e97;
       }
     }
-    li:nth-child(3) i{
+    li:nth-child(3) i {
       font-size: 32px;
     }
     li:hover {
