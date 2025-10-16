@@ -16,18 +16,20 @@
 }
 .el-header .logo,
 .el-footer .logo {
-  width: 130px;
-  height: 40px;
+  width: 150px;
+  height: 30px;
+  padding: 0 10px;
 }
 .el-header i,
 .el-footer i {
   font-size: 17px;
   padding: 0 8px;
   position: relative;
+  color: #2981ff;
 }
 .el-header p,
 .el-footer p {
-  font-size: 17px;
+  font-size: 15px;
 }
 .el-header i,
 .el-footer i {
@@ -53,6 +55,7 @@
   right: 0;
 }
 .el-header .top-r i {
+  padding: 8px;
   transition: 0.4s ease;
 }
 .el-header .top-r i:hover {

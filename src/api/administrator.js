@@ -6,4 +6,4 @@ export const authCode = () => get('/api/auth/authCode')
 // 登录
 export const checkloginByCode = (data) => post('/api/administrator/checkloginByCode', data)
 
-export const list = (params) => post('/api/administrator/list', params)
+export const list = (params) => get('/api/administrator/list', params)

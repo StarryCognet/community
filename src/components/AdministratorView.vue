@@ -1,6 +1,6 @@
 <template>
-  <div class="container" style="width: 100%; height: 100%;">
-    <el-card class="box-card" style="height: 100%;">
+  <div class="container" style="width: 100%; height: 100%">
+    <el-card class="box-card" style="height: 100%">
       <div slot="header" class="clearfix">
         <span class="active">管理员列表</span>
       </div>
@@ -23,7 +23,7 @@
         <el-table-column prop="name" label="姓名"> </el-table-column>
         <el-table-column prop="tel" label="手机号"> </el-table-column>
         <el-table-column prop="typeName" label="类型"> </el-table-column>
-        
+
         <el-table-column label="操作" width="180">
           <template slot-scope="scope">
             <el-button size="small" @click="handleEdit(scope.$index, scope.row)" type="success">修改</el-button>
@@ -49,87 +49,85 @@
 </template>
 
 <script>
-import { list } from "../api/administrator";
+import { list } from '../api/administrator'
 export default {
-  name: "AdministratorView",
+  name: 'AdministratorView',
   data() {
     return {
       query: {
         page: 2,
         psize: 5,
-        key: "",
+        key: '',
       },
       counts: 0,
       // currentPage4:4,
-      gridData: [
-      ],
+      gridData: [],
       dialogTableVisible: false,
       dialogFormVisible: false,
       form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
         delivery: false,
         type: [],
-        resource: "",
-        desc: "",
+        resource: '',
+        desc: '',
       },
-      formLabelWidth: "120px",
+      formLabelWidth: '120px',
 
       currentPage1: 5,
       currentPage2: 5,
       currentPage3: 5,
       currentPage4: 4,
       formInline: {
-        user: "",
-        region: "",
+        user: '',
+        region: '',
       },
-      tableData: [
-       
-      ],
+      tableData: [],
       multipleSelection: [],
-    };
+    }
   },
 
   methods: {
     async getList() {
-      let {data:{counts,list:listData}} = await list(this.query);
-      this.counts = counts;
-      this.tableData = listData;
-      console.log(listData);
-      
+      let {
+        data: { counts, list: listData },
+      } = await list(this.query)
+      this.counts = counts
+      this.tableData = listData
+      console.log(listData)
     },
     onSubmit() {
-      console.log("查询表单提交:", this.formInline);
+      console.log('查询表单提交:', this.formInline)
       // 这里可以添加实际的查询逻辑
     },
     handleSelectionChange(val) {
-      this.multipleSelection = val;
-      console.log("选中项发生变化:", val);
+      this.multipleSelection = val
+      console.log('选中项发生变化:', val)
     },
     handleEdit(index, row) {
-      console.log("编辑操作:", index, row);
+      console.log('编辑操作:', index, row)
       // 这里可以添加编辑逻辑
     },
     handleDelete(index, row) {
-      console.log("删除操作:", index, row);
+      console.log('删除操作:', index, row)
       // 这里可以添加删除逻辑
     },
     handleSizeChange(val) {
-      console.log(`每页 ${val} 条`);
+      console.log(`每页 ${val} 条`)
     },
     handleCurrentChange(val) {
-      console.log(`当前页: ${val}`);
-      this.query.page = val;
-      this.getList();
+      console.log(`当前页: ${val}`)
+      this.query.page = val
+      this.getList()
     },
   },
 
   created() {
-    this.getList();
+    this.getList()
   },
-};
+}
 </script>
 
 <style lang="less" scoped>

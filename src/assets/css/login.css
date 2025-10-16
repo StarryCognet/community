@@ -2,12 +2,12 @@
   background-color: #f7f5f5;
   height: 100%;
 }
-header {
+.container header {
   height: 60px;
   padding: 10px 0 20px;
   background-color: #fff;
 }
-header .logo {
+.container header .logo {
   width: 180px;
   height: 100%;
   padding-left: 33px;
