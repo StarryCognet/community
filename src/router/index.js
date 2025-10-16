@@ -31,6 +31,21 @@ const routes = [
         name: 'news',
         component: () => import('../components/NewsView.vue'),
       },
+      {
+        path: '/stores',
+        name: 'stores',
+        component: () => import('../components/StoresView.vue'),
+      },
+      {
+        path: '/administratorrole',
+        name: 'administratorrole',
+        component: () => import('../components/AdministratorroleView.vue'),
+      },
+      {
+        path: '/house',
+        name: 'house',
+        component: () => import('../components/HouseView.vue'),
+      },
     ],
 
     // component:Loginview
@@ -53,7 +68,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
 })
 
 export default router
