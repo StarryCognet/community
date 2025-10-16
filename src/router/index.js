@@ -26,6 +26,11 @@ const routes = [
         name: 'administrator',
         component: AdministratorView,
       },
+      {
+        path: '/news',
+        name: 'news',
+        component: () => import('../components/NewsView.vue'),
+      },
     ],
 
     // component:Loginview

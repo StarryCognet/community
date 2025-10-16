@@ -68,21 +68,21 @@
   color: red;
   font-size: 25px;
 }
-.el-main .box-card .ins-top {
+.el-main .ins-top {
   position: relative;
   margin: 20px;
 }
-.el-main .box-card .ins-top .top-title {
+.el-main .ins-top .top-title {
   display: flex;
   height: 40px;
   justify-content: space-between;
   align-items: center;
 }
-.el-main .box-card .ins-top .top-title .el-radio-group {
+.el-main .ins-top .top-title .el-radio-group {
   position: relative;
   top: 15px;
 }
-.el-main .box-card .ins-top .el-tabs {
+.el-main .ins-top .el-tabs {
   padding-top: 60px;
 }
 body > .el-container {

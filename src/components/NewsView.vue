@@ -2,7 +2,7 @@
   <!-- <div class="container" style="width: 100%; height: 100%;"> -->
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <span class="active">管理员列表</span>
+        <span class="active">公告列表</span>
       </div>
 
       <el-row>
@@ -45,10 +45,10 @@
 </template>
 
 <script>
-import { list } from "../api/administrator";
+import { list } from "../api/news";
 import BaseTable from'@/components/BaseTable.vue'
 export default {
-  name: "AdministratorView",
+  name: "NewsView",
   components: {
     BaseTable,
   },
@@ -57,8 +57,9 @@ export default {
         loading: true,
       query: {
         page: 1,
-        psize: 8,
+        psize: 5,
         key: "",
+        type: "",
       },
       counts: 0,
       tableColumn:[
@@ -68,21 +69,36 @@ export default {
           width: 180,
         },
         {
-          prop: "username",
-          label: "登录账号",
+          prop: "title",
+          label: "标题",
           width: 180,
+          slotname:"title"
+
         },
         {
-          prop: "name",
-          label: "姓名",
+          prop: "typename",
+          label: "分类",
         },
         {
-          prop: "tel",
-          label: "手机号",
+          prop: "picture",
+          label: "图片",
+          slotname:"picture"
+
         },
         {
-          prop: "typeName",
-          label: "类型",
+          prop: "state",
+          label: "状态",
+          slotname:"state"
+        },
+        {
+          prop: "addtime",
+          label: "发布时间",
+          slotname:"addtime"
+
+        },
+           {
+          prop: "edituser",
+          label: "发布人",
         },
 
       ],
@@ -115,6 +131,7 @@ export default {
   },
 
   methods: {
+
     async getList() {
       this.loading = true;
       try {

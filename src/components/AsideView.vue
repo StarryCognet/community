@@ -1,45 +1,7 @@
 <template>
   <el-aside width="200px">
-    <!-- <ul>
-      <li>
-        <i class="iconfont icon-qitafeiyong"></i>
-        <p>缴费</p>
-      </li>
-      <li>
-        <i class="iconfont icon-renshu"></i>
-        <p>居民</p>
-      </li>
-      <li>
-        <i class="iconfont icon-wuyeguanli"></i>
-        <p>保修</p>
-      </li>
-      <li>
-        <i class="iconfont icon-complain"></i>
-        <p>投诉</p>
-      </li>
-      <li>
-        <i class="iconfont icon-qiyeguanli_yuangongguanli"></i>
-        <p>职员</p>
-      </li>
-      <li>
-        <i class="iconfont icon-gonggao"></i>
-        <p>公告</p>
-      </li>
-      <li>
-        <i class="iconfont icon-mendian"></i>
-        <p>门店</p>
-      </li>
-      <li>
-        <i class="iconfont icon-tupian"></i>
-        <p>图片</p>
-      </li>
-      <li>
-        <i class="iconfont icon-guanliyuan1"></i>
-        <p>会员</p>
-      </li>
-    </ul> -->
     <ul>
-      <li v-for="(item, index) in getLeftMenu" :key="index">
+      <li v-for="(item, index) in getLeftMenu" :key="index" @click="handleMenuClick(item)">
         <i :class="['iconfont', item.ico]"></i>
         <p>{{ item.name.substr(0, 2) }}</p>
       </li>
@@ -51,19 +13,29 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'AsideView',
-  
+
   data() {
     return {
       tabPosition: 'left',
     }
   },
-  methods: {},
-  created() { },
-      computed: {
-        ...mapGetters([
-            'getLeftMenu'
-        ])
+  methods: {
+    handleMenuClick(item) {
+      // 根据菜单项的url或者name进行路由跳转
+      if (item.url) {
+        this.$router.push(item.url)
+      } else if (item.name.includes('管理员')) {
+        this.$router.push('/administrator')
+      } else {
+        // 可以根据实际需求添加更多判断逻辑
+        console.log('未知的菜单项:', item)
+      }
     },
+  },
+  created() {},
+  computed: {
+    ...mapGetters(['getLeftMenu']),
+  },
 }
 </script>
 

@@ -7,3 +7,5 @@ export const authCode = () => get('/api/auth/authCode')
 export const checkloginByCode = (data) => post('/api/administrator/checkloginByCode', data)
 
 export const list = (params) => get('/api/administrator/list', params)
+
+export const del = (params) => get('/api/administrator/delete',params)
