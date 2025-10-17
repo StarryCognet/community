@@ -20,12 +20,13 @@
 
     <!--  表格 -->
 
-    <BaseTable :tableColumn="tableColumn" :tableData="tableData" :loading="loading">
-      <template #options="{ row }">
-        <el-button size="small" @click="handleClick(row)" type="success">修改</el-button>
-        <el-button size="small" @click="handleDelete(row)" type="danger">删除</el-button>
-      </template>
-    </BaseTable>
+      <BaseTable 
+        :tableColumn="tableColumn" 
+        :tableData="tableData" 
+        :loading="loading"
+        @edit="handleClick"
+        @delete="handleDelete">
+      </BaseTable>
 
     <!-- 分页 -->
     <el-pagination class="pagination" @size-change="handleSizeChange" @current-change="handleCurrentChange"
@@ -129,25 +130,33 @@ export default {
   },
 
   methods: {
-    handleDelete(row) {
-      this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      }).then(async () => {
+handleClick(row) {
+      console.log('编辑操作:', row)
+      // 这里可以添加编辑逻辑
+    },
+    async handleDelete(row) {
+      try {
+        await this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        })
         await del({ id: row.id })
         await this.getList()
         this.$message({
           type: 'success',
           message: '删除成功!'
-        });
-      }).catch(() => {
-        this.$message({
-          type: 'info',
-          message: '已取消删除'
-        });
-      });
-      console.log("row:", row);
+        })
+      } catch (error) {
+        if (error === 'cancel') {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          })
+        } else {
+          console.error('删除失败:', error)
+        }
+      }
     },
 
     async getList() {

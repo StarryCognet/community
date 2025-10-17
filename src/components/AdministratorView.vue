@@ -18,7 +18,13 @@
 
       <!--  表格 -->
 
-      <BaseTable :tableColumn="tableColumn" :tableData="tableData" :loading="loading"> </BaseTable>
+      <BaseTable 
+        :tableColumn="tableColumn" 
+        :tableData="tableData" 
+        :loading="loading"
+        @edit="handleClick"
+        @delete="handleDelete">
+      </BaseTable>
 
       <!-- 分页 -->
       <el-pagination
@@ -39,7 +45,7 @@
 </template>
 
 <script>
-import { list } from '../api/administrator'
+import { list, del } from '../api/administrator'
 import BaseTable from '@/components/BaseTable.vue'
 import DialogAdministrator from '@/components/DialogAdministrator.vue'
 export default {
@@ -136,13 +142,33 @@ export default {
       this.multipleSelection = val
       console.log('选中项发生变化:', val)
     },
-    handleEdit(index, row) {
-      console.log('编辑操作:', index, row)
+    handleClick(row) {
+      console.log('编辑操作:', row)
       // 这里可以添加编辑逻辑
     },
-    handleDelete(index, row) {
-      console.log('删除操作:', index, row)
-      // 这里可以添加删除逻辑
+    async handleDelete(row) {
+      try {
+        await this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        })
+        await del({ id: row.id })
+        await this.getList()
+        this.$message({
+          type: 'success',
+          message: '删除成功!'
+        })
+      } catch (error) {
+        if (error === 'cancel') {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          })
+        } else {
+          console.error('删除失败:', error)
+        }
+      }
     },
     handleSizeChange(val) {
       this.query.psize = val

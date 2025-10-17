@@ -15,32 +15,34 @@
     <el-row :gutter="10" class="btns">
       <el-button type="primary" class="searchbtn" size="small">添加</el-button>
       <el-button type="primary" class="searchbtn ico" size="small">批量删除</el-button>
-
     </el-row>
 
     <!--  表格 -->
 
-    <BaseTable :tableColumn="tableColumn" :tableData="tableData" :loading="loading">
-      <template #options="{ row }">
-        <el-button size="small" @click="handleClick(row)" type="success">修改</el-button>
-        <el-button size="small" @click="handleDelete(row)" type="danger">删除</el-button>
-      </template>
-    </BaseTable>
+    <BaseTable :tableColumn="tableColumn" :tableData="tableData" :loading="loading" @edit="handleClick" @delete="handleDelete"> </BaseTable>
 
     <!-- 分页 -->
-    <el-pagination class="pagination" @size-change="handleSizeChange" @current-change="handleCurrentChange"
-      :current-page="query.page" :page-sizes="[5, 10, 20, 50]" :page-size="query.psize"
-      layout="total, sizes, prev, pager, next, jumper" :total="counts">
+    <el-pagination
+      class="pagination"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="query.page"
+      :page-sizes="[5, 10, 20, 50]"
+      :page-size="query.psize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="counts"
+    >
     </el-pagination>
   </el-card>
   <!-- </div> -->
 </template>
 
 <script>
-import { houseslist, housesdelete } from "../api/administrator";
+import { houseslist, housesdelete } from '../api/administrator'
+// import { del } from '../api/stores'
 import BaseTable from '@/components/BaseTable.vue'
 export default {
-  name: "NewsView",
+  name: 'NewsView',
   components: {
     BaseTable,
   },
@@ -50,146 +52,151 @@ export default {
       query: {
         page: 1,
         psize: 5,
-        key: "",
-        type: "",
+        key: '',
+        type: '',
       },
       counts: 0,
       tableColumn: [
         {
-          prop: "id",
-          label: "房间id",
+          prop: 'id',
+          label: '房间id',
           width: 180,
         },
         {
-          prop: "building",
-          label: "楼号",
+          prop: 'building',
+          label: '楼号',
           width: 180,
-
         },
         {
-          prop: "houseno",
-          label: "房间号",
+          prop: 'houseno',
+          label: '房间号',
         },
         {
-          prop: "areas",
-          label: "面积(平方)",
-
+          prop: 'areas',
+          label: '面积(平方)',
         },
         {
-          prop: "type",
-          label: "房间类型",
+          prop: 'type',
+          label: '房间类型',
         },
         {
-          prop: "orientation",
-          label: "朝向",
-
+          prop: 'orientation',
+          label: '朝向',
         },
         {
-          prop: "options",
-          label: "操作",
-          slotname: 'options'
+          prop: 'options',
+          label: '操作',
+          slotname: 'options',
         },
-
       ],
       gridData: [],
       dialogTableVisible: false,
       dialogFormVisible: false,
       form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
         delivery: false,
         type: [],
-        resource: "",
-        desc: "",
+        resource: '',
+        desc: '',
       },
-      formLabelWidth: "120px",
+      formLabelWidth: '120px',
 
       currentPage1: 5,
       currentPage2: 5,
       currentPage3: 5,
       currentPage4: 4,
       formInline: {
-        user: "",
-        region: "",
+        user: '',
+        region: '',
       },
       tableData: [],
       multipleSelection: [],
-    };
+    }
   },
 
   methods: {
-    handleDelete(row) {
-      this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      }).then(async () => {
+    handleClick(row) {
+      console.log('编辑操作:', row)
+      // 这里可以添加编辑逻辑
+    },
+    async handleDelete(row) {
+      try {
+        await this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning',
+        })
         await housesdelete({ id: row.id })
         await this.getList()
         this.$message({
           type: 'success',
-          message: '删除成功!'
-        });
-      }).catch(() => {
-        this.$message({
-          type: 'info',
-          message: '已取消删除'
-        });
-      });
-      console.log("row:", row);
+          message: '删除成功!',
+        })
+      } catch (error) {
+        if (error === 'cancel') {
+          this.$message({
+            type: 'info',
+            message: '已取消删除',
+          })
+        } else {
+          console.error('删除失败:', error)
+        }
+      }
     },
 
     async getList() {
-      this.loading = true;
+      this.loading = true
       try {
-        let { data: { counts, list: listData } } = await houseslist(this.query);
-        this.counts = counts;
-        this.tableData = listData;
-        this.loading = false;
-        console.log('获取到的数据:', listData);
+        let {
+          data: { counts, list: listData },
+        } = await houseslist(this.query)
+        this.counts = counts
+        this.tableData = listData
+        this.loading = false
+        console.log('获取到的数据:', listData)
       } catch (error) {
-        console.error('获取数据失败:', error);
+        console.error('获取数据失败:', error)
       }
     },
     onSubmit() {
-      console.log("查询表单提交:", this.formInline);
+      console.log('查询表单提交:', this.formInline)
       // 这里可以添加实际的查询逻辑
     },
     handleSelectionChange(val) {
-      this.multipleSelection = val;
-      console.log("选中项发生变化:", val);
+      this.multipleSelection = val
+      console.log('选中项发生变化:', val)
     },
     handleEdit(index, row) {
-      console.log("编辑操作:", index, row);
+      console.log('编辑操作:', index, row)
       // 这里可以添加编辑逻辑
     },
     handleSizeChange(val) {
-      this.query.psize = val;
-      this.query.page = 1; // 重置到第一页
-      this.getList();
-
+      this.query.psize = val
+      this.query.page = 1 // 重置到第一页
+      this.getList()
     },
     handleCurrentChange(val) {
-      this.query.page = val;
-      this.getList();
+      this.query.page = val
+      this.getList()
     },
     search() {
-      this.query.page = 1;
-      this.getList();
+      this.query.page = 1
+      this.getList()
     },
   },
 
   created() {
-    this.getList();
+    this.getList()
   },
-};
+}
 </script>
 
 <style lang="less" scoped>
 @import url(../assets/css/search.less);
-.ico{
-    background-color: red;
+.ico {
+  background-color: red;
 }
 </style>

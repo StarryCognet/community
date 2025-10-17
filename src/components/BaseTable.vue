@@ -17,6 +17,9 @@
           <div v-if="item.slotname == 'addtime'">
             {{ scope.row.addtime.substr(0, 19) }}
           </div>
+          <div v-if="item.slotname == 'logo'">
+      <img style="width: 100px;" :src="'http://api.quanjiu.net/estate/upload/' + scope.row.logo" alt="">
+     </div>
         </template>
       </el-table-column>
 
@@ -25,8 +28,8 @@
 
     <el-table-column label="操作" width="180">
       <template slot-scope="scope">
-        <el-button size="small" @click="handleEdit(scope.$index, scope.row)" type="success">修改</el-button>
-        <el-button size="small" type="danger">删除</el-button>
+        <el-button size="small" @click="$emit('edit', scope.row)" type="success">修改</el-button>
+        <el-button size="small" @click="$emit('delete', scope.row)" type="danger">删除</el-button>
       </template>
     </el-table-column>
   </el-table>

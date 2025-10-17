@@ -1,185 +1,198 @@
 <template>
   <!-- <div class="container" style="width: 100%; height: 100%;"> -->
-    <el-card class="box-card">
-      <div slot="header" class="clearfix">
-        <span class="active">公告列表</span>
-      </div>
+  <el-card class="box-card">
+    <div slot="header" class="clearfix">
+      <span class="active">公告列表</span>
+    </div>
 
-      <el-row>
-        <el-col :span="24">
-          <span>关键字：</span>
-          <el-input 
-          class="searchInp"
-           placeholder="请输入内容"
-           v-model="query.key"
-           ></el-input>
-          <el-button type="primary" class="searchbtn" size="small" @click="search">查询</el-button>
-        </el-col>
-      </el-row>
-      <el-row :gutter="10" class="btns">
-        <el-button type="primary" class="searchbtn" size="small">添加</el-button>
-      </el-row>
+    <el-row>
+      <el-col :span="24">
+        <span>关键字：</span>
+        <el-input class="searchInp" placeholder="请输入内容" v-model="query.key"></el-input>
+        <el-button type="primary" class="searchbtn" size="small" @click="search">查询</el-button>
+      </el-col>
+    </el-row>
+    <el-row :gutter="10" class="btns">
+      <el-button type="primary" class="searchbtn" size="small">添加</el-button>
+    </el-row>
 
-      <!--  表格 -->
+    <!--  表格 -->
 
-      <BaseTable 
+    <!-- <BaseTable 
         :tableColumn="tableColumn" 
         :tableData="tableData" 
         :loading="loading">
-      </BaseTable>
+      </BaseTable> -->
+    <BaseTable :tableColumn="tableColumn" :tableData="tableData" :loading="loading" @edit="handleClick" @delete="handleDelete"> </BaseTable>
 
-      <!-- 分页 -->
-      <el-pagination
-        class="pagination"
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="query.page"
-        :page-sizes="[5, 10, 20, 50]"
-        :page-size="query.psize"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="counts"
-      >
-      </el-pagination>
-    </el-card>
+    <!-- 分页 -->
+    <el-pagination
+      class="pagination"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="query.page"
+      :page-sizes="[5, 10, 20, 50]"
+      :page-size="query.psize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="counts"
+    >
+    </el-pagination>
+  </el-card>
   <!-- </div> -->
 </template>
 
 <script>
-import { list } from "../api/news";
-import BaseTable from'@/components/BaseTable.vue'
+import { list,del } from '../api/news'
+import BaseTable from '@/components/BaseTable.vue'
 export default {
-  name: "NewsView",
+  name: 'NewsView',
   components: {
     BaseTable,
   },
   data() {
     return {
-        loading: true,
+      loading: true,
       query: {
         page: 1,
         psize: 5,
-        key: "",
-        type: "",
+        key: '',
+        type: '',
       },
       counts: 0,
-      tableColumn:[
+      tableColumn: [
         {
-          prop: "id",
-          label: "ID",
+          prop: 'id',
+          label: 'ID',
           width: 180,
         },
         {
-          prop: "title",
-          label: "标题",
+          prop: 'title',
+          label: '标题',
           width: 180,
-          slotname:"title"
-
+          slotname: 'title',
         },
         {
-          prop: "typename",
-          label: "分类",
+          prop: 'typename',
+          label: '分类',
         },
         {
-          prop: "picture",
-          label: "图片",
-          slotname:"picture"
-
+          prop: 'picture',
+          label: '图片',
+          slotname: 'picture',
         },
         {
-          prop: "state",
-          label: "状态",
-          slotname:"state"
+          prop: 'state',
+          label: '状态',
+          slotname: 'state',
         },
         {
-          prop: "addtime",
-          label: "发布时间",
-          slotname:"addtime"
-
+          prop: 'addtime',
+          label: '发布时间',
+          slotname: 'addtime',
         },
-           {
-          prop: "edituser",
-          label: "发布人",
+        {
+          prop: 'edituser',
+          label: '发布人',
         },
-
       ],
       gridData: [],
       dialogTableVisible: false,
       dialogFormVisible: false,
       form: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
         delivery: false,
         type: [],
-        resource: "",
-        desc: "",
+        resource: '',
+        desc: '',
       },
-      formLabelWidth: "120px",
+      formLabelWidth: '120px',
 
       currentPage1: 5,
       currentPage2: 5,
       currentPage3: 5,
       currentPage4: 4,
       formInline: {
-        user: "",
-        region: "",
+        user: '',
+        region: '',
       },
       tableData: [],
       multipleSelection: [],
-    };
+    }
   },
 
   methods: {
-
     async getList() {
-      this.loading = true;
+      this.loading = true
       try {
-        let {data:{counts,list:listData}} = await list(this.query);
-        this.counts = counts;
-        this.tableData = listData;
-        this.loading = false;
-        console.log('获取到的数据:', listData);
+        let {
+          data: { counts, list: listData },
+        } = await list(this.query)
+        this.counts = counts
+        this.tableData = listData
+        this.loading = false
+        console.log('获取到的数据:', listData)
       } catch (error) {
-        console.error('获取数据失败:', error);
+        console.error('获取数据失败:', error)
       }
     },
     onSubmit() {
-      console.log("查询表单提交:", this.formInline);
+      console.log('查询表单提交:', this.formInline)
       // 这里可以添加实际的查询逻辑
     },
     handleSelectionChange(val) {
-      this.multipleSelection = val;
-      console.log("选中项发生变化:", val);
+      this.multipleSelection = val
+      console.log('选中项发生变化:', val)
     },
-    handleEdit(index, row) {
-      console.log("编辑操作:", index, row);
+    handleClick(row) {
+      console.log('编辑操作:', row)
       // 这里可以添加编辑逻辑
     },
-    handleDelete(index, row) {
-      console.log("删除操作:", index, row);
-      // 这里可以添加删除逻辑
+    async handleDelete(row) {
+      try {
+        await this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        })
+        await del({ id: row.id })
+        await this.getList()
+        this.$message({
+          type: 'success',
+          message: '删除成功!'
+        })
+      } catch (error) {
+        if (error === 'cancel') {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          })
+        } else {
+          console.error('删除失败:', error)
+        }
+      }
     },
     handleSizeChange(val) {
-      this.query.psize = val;
-      this.query.page = 1; // 重置到第一页
-      this.getList();
-
+      this.query.psize = val
+      this.query.page = 1 // 重置到第一页
+      this.getList()
     },
     handleCurrentChange(val) {
-      this.query.page = val;
-      this.getList();
+      this.query.page = val
+      this.getList()
     },
-    search(){
-      this.query.page = 1;
-      this.getList();
+    search() {
+      this.query.page = 1
+      this.getList()
     },
   },
 
   created() {
-    this.getList();
+    this.getList()
   },
-};
+}
 </script>
 
 <style lang="less" scoped>
