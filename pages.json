@@ -10,7 +10,13 @@
 	"subPackages": [
 		{
 			"root": "pages/pagesmember",
-			"pages": []
+			"pages": [{
+				"path" : "text/text",
+				"style" : 
+				{
+					"navigationBarTitleText" : "text"
+				}
+			}]
 		},
 		{
 			"root": "pages/pagesbusiness",
