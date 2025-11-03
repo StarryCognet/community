@@ -7,6 +7,22 @@
 			}
 		}
 	],
+	"subPackages": [
+		{
+			"root": "pages/pagesmember",
+			"pages": []
+		},
+		{
+			"root": "pages/pagesbusiness",
+			"pages": [{
+				"path" : "text/text",
+				"style" : 
+				{
+					"navigationBarTitleText" : "text"
+				}
+			}]
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
