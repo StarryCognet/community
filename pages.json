@@ -98,6 +98,12 @@
 						"navigationBarTitleText": "动态详情",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "feedbackrecord/feedbackrecord",
+					"style": {
+						"navigationBarTitleText": "反馈记录"
+					}
 				}
 			]
 		}
