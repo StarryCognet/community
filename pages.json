@@ -42,6 +42,27 @@
 						"navigationBarTitleText": "报修",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "problemfeedback/problemfeedback",
+					"style": {
+						"navigationBarTitleText": "问题反馈",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "livingpayment/livingpayment",
+					"style": {
+						"navigationBarTitleText": "生活缴费",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "paymentrecords/paymentrecords",
+					"style": {
+						"navigationBarTitleText": "生活缴费-缴费记录",
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		}
