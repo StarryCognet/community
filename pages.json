@@ -7,24 +7,29 @@
 			}
 		}
 	],
-	"subPackages": [
-		{
+	"subPackages": [{
 			"root": "pages/pagesmember",
 			"pages": [{
-				"path" : "text/text",
-				"style" : 
+					"path": "text/text",
+					"style": {
+						"navigationBarTitleText": "text"
+					}
+				},
 				{
-					"navigationBarTitleText" : "text"
+					"path": "settings/settings",
+					"style": {
+						"navigationBarTitleText": "会员中心设置",
+						"navigationStyle": "custom"
+					}
 				}
-			}]
+			]
 		},
 		{
 			"root": "pages/pagesbusiness",
 			"pages": [{
-				"path" : "text/text",
-				"style" : 
-				{
-					"navigationBarTitleText" : "text"
+				"path": "text/text",
+				"style": {
+					"navigationBarTitleText": "text"
 				}
 			}]
 		}
