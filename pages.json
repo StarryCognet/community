@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+=======
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "index"
+		}
+	}],
+	"subPackages": [{
+			"root": "pages/pagesmember",
+			"pages": [{
+					"path": "text/text",
+					"style": {
+						"navigationBarTitleText": "text"
+					}
+				},
+				{
+					"path": "settings/settings",
+					"style": {
+						"navigationBarTitleText": "会员中心设置",
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/pagesbusiness",
+			"pages": [{
+					"path": "text/text",
+					"style": {
+						"navigationBarTitleText": "text"
+					}
+				},
+				{
+					"path": "warranty/warranty",
+					"style": {
+						"navigationBarTitleText": "报修",
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
+>>>>>>> master
