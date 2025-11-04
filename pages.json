@@ -19,6 +19,12 @@
 						"navigationBarTitleText": "会员中心设置",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "member-settings/member-settings",
+					"style": {
+						"navigationBarTitleText": "会员设置"
+					}
 				}
 			]
 		},
