@@ -3,30 +3,35 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "index"
 			}
 		}
 	],
-	"subPackages": [
-		{
+	"subPackages": [{
 			"root": "pages/pagesmember",
 			"pages": [{
-				"path" : "text/text",
-				"style" : 
-				{
-					"navigationBarTitleText" : "text"
+				"path": "text/text",
+				"style": {
+					"navigationBarTitleText": "text"
 				}
 			}]
 		},
 		{
 			"root": "pages/pagesbusiness",
 			"pages": [{
-				"path" : "text/text",
-				"style" : 
+					"path": "text/text",
+					"style": {
+						"navigationBarTitleText": "text"
+					}
+				},
 				{
-					"navigationBarTitleText" : "text"
+					"path": "warranty/warranty",
+					"style": {
+						"navigationBarTitleText": "报修",
+						"navigationStyle": "custom"
+					}
 				}
-			}]
+			]
 		}
 	],
 	"globalStyle": {
