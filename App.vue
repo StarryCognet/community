@@ -14,9 +14,9 @@ export default {
 
 <style>
 /* 每个页面公共css */
+@import url('static/iconfont.css');
 * {
 	padding: 0;
 	margin: 0;
 }
 </style>
-　

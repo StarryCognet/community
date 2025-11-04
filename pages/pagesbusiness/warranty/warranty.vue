@@ -26,6 +26,27 @@
 			<view class="box-text">
 				<textarea class="text" cols="10" rows="10" placeholder="请输入报修问题，以便维修人员尽快为您解决"></textarea>
 			</view>
+			<view class="picture">
+				<view class="itemm">
+					<uni-icons style="color: #898989" type="camera" size="35"></uni-icons>
+				</view>
+				<view class="itemm">
+					<view class="chuo">
+						<uni-icons style="color: #fff" type="closeempty" size="14"></uni-icons>
+					</view>
+				</view>
+				<view class="itemm">
+					<view class="chuo">
+						<uni-icons style="color: #fff" type="closeempty" size="14"></uni-icons>
+					</view>
+				</view>
+				<view class="itemm">
+					<view class="chuo">
+						<uni-icons style="color: #fff" type="closeempty" size="14"></uni-icons>
+					</view>
+				</view>
+			</view>
+			<view class="submit">提交</view>
 		</view>
 	</view>
 </template>
@@ -63,11 +84,54 @@ export default {
 			border: 1rpx solid #dcdcdc;
 			border-radius: 15rpx;
 			padding: 20rpx;
-			// width: 820rpx;
 			width: 94%;
 			height: 130rpx;
 			color: #c8c8c8;
 		}
 	}
+}
+.picture {
+	width: 90%;
+	height: 100rpx;
+	display: flex;
+
+	.itemm {
+		width: 100rpx;
+		height: 100rpx;
+		border: 1rpx solid #b6b6b6;
+		margin: 40rpx;
+		margin-left: 0;
+		border-radius: 10rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.chuo {
+			width: 30rpx;
+			height: 30rpx;
+			background-color: #898989;
+			border-radius: 15rpx;
+			position: absolute;
+			top: -10rpx;
+			right: -10rpx;
+			color: #fff;
+			line-height: 30rpx;
+			font-size: 10rpx;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+.submit {
+	width: 450rpx;
+	height: 70rpx;
+	margin: 0 auto;
+	border-radius: 30rpx;
+	margin-top: 100rpx;
+	background-color: #1f8fff;
+	color: #fff;
+	text-align: center;
+	line-height: 70rpx;
 }
 </style>
