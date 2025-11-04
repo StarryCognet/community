@@ -79,9 +79,27 @@
 			<div class="daohang">
 				<div class="de-box">
 					<div class="de">
-						<span></span>
+						<span style="color: #3b85f6">dww</span>
 					</div>
-					<p>主页</p>
+					<p style="color: #9cb2ee">主页</p>
+				</div>
+				<div class="de-box">
+					<div class="de">
+						<span>dww</span>
+					</div>
+					<p style="color: #9cb2ee">商店</p>
+				</div>
+				<div class="de-box">
+					<div class="de">
+						<span>dww</span>
+					</div>
+					<p style="color: #9cb2ee">消息</p>
+				</div>
+				<div class="de-box">
+					<div class="de">
+						<span>dww</span>
+					</div>
+					<p style="color: #9cb2ee">我的</p>
 				</div>
 			</div>
 		</div>
