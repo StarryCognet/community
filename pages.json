@@ -1,10 +1,31 @@
 {
 	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "index"
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "index"
+			}
+		},
+		{
+			"path": "pages/pages/text/text",
+			"style": {
+				"navigationBarTitleText": "text"
+			}
+		},
+		{
+			"path": "pages/pages/chatdetails/chatdetails",
+			"style": {
+				"navigationBarTitleText": "聊天详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/cashierdesk/cashierdesk",
+			"style": {
+				"navigationBarTitleText": "收银台",
+				"navigationStyle": "custom"
+			}
 		}
-	}],
+	],
 	"subPackages": [{
 			"root": "pages/pagesmember",
 			"pages": [{
@@ -67,6 +88,41 @@
 					"path": "warranty/warranty",
 					"style": {
 						"navigationBarTitleText": "报修",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "problemfeedback/problemfeedback",
+					"style": {
+						"navigationBarTitleText": "问题反馈",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "livingpayment/livingpayment",
+					"style": {
+						"navigationBarTitleText": "生活缴费",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "paymentrecords/paymentrecords",
+					"style": {
+						"navigationBarTitleText": "生活缴费-缴费记录",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "detailsoftheissue/detailsoftheissue",
+					"style": {
+						"navigationBarTitleText": "问题详情",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "dynamicdetails/dynamicdetails",
+					"style": {
+						"navigationBarTitleText": "动态详情",
 						"navigationStyle": "custom"
 					}
 				}
