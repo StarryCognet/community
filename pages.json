@@ -52,6 +52,27 @@
 					"style": {
 						"navigationBarTitleText": "添加车辆"
 					}
+				},
+				{
+					"path": "familymembers/familymembers",
+					"style": {
+						"navigationBarTitleText": "家庭成员",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "addmember/addmember",
+					"style": {
+						"navigationBarTitleText": "添加居民",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "editpersonalinfo/editpersonalinfo",
+					"style": {
+						"navigationBarTitleText": "修改个人资料",
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		},
