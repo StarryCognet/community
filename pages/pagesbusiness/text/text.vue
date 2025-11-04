@@ -1,19 +1,13 @@
 <template>
-	<view>
-		
-	</view>
+	<view>1111</view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				
-			};
-		}
+export default {
+	data() {
+		return {};
 	}
+};
 </script>
 
-<style lang="less">
-
-</style>
+<style lang="less"></style>
