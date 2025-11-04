@@ -3,8 +3,9 @@
 		<div class="conmt">
 			<div class="conmt-top">
 				<div class="conmt-box">
-					<span style="color: #cc7059"><</span>
-					<p>dadw</p>
+					<uni-icons class="biao" style="color: #cc7059" custom-prefix="iconfont" type="icon-xiugaishoujihao" size="30"></uni-icons>
+
+					<p>修改手机号</p>
 				</div>
 				<div class="box">
 					<span>></span>
@@ -12,8 +13,8 @@
 			</div>
 			<div class="conmt-top">
 				<div class="conmt-box">
-					<span style="color: #3dce6d"><</span>
-					<p>dadw</p>
+					<uni-icons class="biao" style="color: #3dce6d" custom-prefix="iconfont" type="icon-xiugaimima" size="30"></uni-icons>
+					<p>修改密码</p>
 				</div>
 				<div class="box">
 					<span>></span>
@@ -23,21 +24,21 @@
 		<div class="cont">
 			<div class="cont-top">
 				<div class="cont-box">
-					<span style="color: #359bec"><</span>
-					<p>dadw</p>
+					<uni-icons class="biao" style="color: #359bec" custom-prefix="iconfont" type="icon-yunongtongqingchuhuancun" size="30"></uni-icons>
+					<p>清除缓存</p>
 				</div>
 				<div class="box">
-					<p>dawd</p>
+					<p>12M</p>
 					<span>></span>
 				</div>
 			</div>
 			<div class="cont-top">
 				<div class="cont-box">
-					<span style="color: #75dc98"><</span>
-					<p>dadw</p>
+					<uni-icons class="biao" style="color: #75dc98" custom-prefix="iconfont" type="icon-dangqianbanben" size="30"></uni-icons>
+					<p>当前版本</p>
 				</div>
 				<div class="box">
-					<p>dawd</p>
+					<p>1.0.0</p>
 					<span>></span>
 				</div>
 			</div>

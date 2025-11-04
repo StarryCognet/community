@@ -25,6 +25,33 @@
 					"style": {
 						"navigationBarTitleText": "会员设置"
 					}
+				},
+				{
+					"path": "myhouse/myhouse",
+					"style": {
+						"navigationBarTitleText": "我的房屋",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "myvehicle/myvehicle",
+					"style": {
+						"navigationBarTitleText": "我的车辆",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "myvehicle2/myvehicle2",
+					"style": {
+						"navigationBarTitleText": "我的车辆",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "addvehicle/addvehicle",
+					"style": {
+						"navigationBarTitleText": "添加车辆"
+					}
 				}
 			]
 		},
