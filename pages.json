@@ -108,6 +108,13 @@
 				"navigationBarTitleText": "门店列表",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/pages/news/news",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"navigationStyle": "custom"
+			}
 		}
 
 	],
@@ -305,7 +312,7 @@
 				{
 					"path": "warrantyrecord/warrantyrecord",
 					"style": {
-						"navigationBarTitleText": "保修记录",
+						"navigationBarTitleText": "报修记录",
 						"navigationStyle": "custom"
 					}
 				}
