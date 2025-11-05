@@ -31,6 +31,41 @@
 				"navigationBarTitleText": "注册-验证码",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/pages/forgetpassword/forgetpassword",
+			"style": {
+				"navigationBarTitleText": "忘记密码",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/changepassword/changepassword",
+			"style": {
+				"navigationBarTitleText": "修改密码",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/home/home",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/membercenter/membercenter",
+			"style": {
+				"navigationBarTitleText": "会员中心",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/storedetails/storedetails",
+			"style": {
+				"navigationBarTitleText": "门店详情",
+				"navigationStyle": "custom"
+			}
 		}
 
 	],
@@ -222,6 +257,13 @@
 					"path": "chatview/chatview",
 					"style": {
 						"navigationBarTitleText": "聊天页面",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "warrantyrecord/warrantyrecord",
+					"style": {
+						"navigationBarTitleText": "保修记录",
 						"navigationStyle": "custom"
 					}
 				}
