@@ -94,6 +94,13 @@
 						"navigationBarTitleText": "修改个人资料",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "aboutus/aboutus",
+					"style": {
+						"navigationBarTitleText": "关于我们",
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		},
