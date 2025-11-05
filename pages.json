@@ -88,6 +88,27 @@
 						"navigationBarTitleText": "关于我们",
 						"navigationStyle": "custom"
 					}
+				},
+				{
+					"path": "changepassword/changepassword",
+					"style": {
+						"navigationBarTitleText": "修改密码",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "changephonenumber/changephonenumber",
+					"style": {
+						"navigationBarTitleText": "修改手机号",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "changephonenumber2/changephonenumber2",
+					"style": {
+						"navigationBarTitleText": "修改手机号2",
+						"navigationStyle": "custom"
+					}
 				}
 			]
 		},
