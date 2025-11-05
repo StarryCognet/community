@@ -10,28 +10,8 @@
 			"style": {
 				"navigationBarTitleText": "text"
 			}
-		},
-		{
-			"path": "pages/pages/chatdetails/chatdetails",
-			"style": {
-				"navigationBarTitleText": "聊天详情",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/pages/cashierdesk/cashierdesk",
-			"style": {
-				"navigationBarTitleText": "收银台",
-				"navigationStyle": "custom"
-			}
-		},
-		{
-			"path": "pages/pages/chatview/chatview",
-			"style": {
-				"navigationBarTitleText": "聊天页面",
-				"navigationStyle": "custom"
-			}
 		}
+
 	],
 	"subPackages": [{
 			"root": "pages/pagesmember",
@@ -164,7 +144,43 @@
 				{
 					"path": "feedbackrecord/feedbackrecord",
 					"style": {
-						"navigationBarTitleText": "反馈记录"
+						"navigationBarTitleText": "反馈记录",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "relation/relation",
+					"style": {
+						"navigationBarTitleText": "联系楼长",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "consult/consult",
+					"style": {
+						"navigationBarTitleText": "咨询",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "chatdetails/chatdetails",
+					"style": {
+						"navigationBarTitleText": "聊天详情",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "cashierdesk/cashierdesk",
+					"style": {
+						"navigationBarTitleText": "收银台",
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "chatview/chatview",
+					"style": {
+						"navigationBarTitleText": "聊天页面",
+						"navigationStyle": "custom"
 					}
 				}
 			]
