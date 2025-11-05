@@ -108,6 +108,13 @@
 				"navigationBarTitleText": "门店列表",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/pages/myhouse6/myhouse6",
+			"style": {
+				"navigationBarTitleText": "房屋认证6",
+				"navigationStyle": "custom"
+			}
 		}
 
 	],
