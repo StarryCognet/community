@@ -10,6 +10,27 @@
 			"style": {
 				"navigationBarTitleText": "text"
 			}
+		},
+		{
+			"path": "pages/pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录页面",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/signuppassword/signuppassword",
+			"style": {
+				"navigationBarTitleText": "注册-密码",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/signupcode/signupcode",
+			"style": {
+				"navigationBarTitleText": "注册-验证码",
+				"navigationStyle": "custom"
+			}
 		}
 
 	],
