@@ -66,6 +66,13 @@
 				"navigationBarTitleText": "房屋认证5",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/pages/storelist/storelist",
+			"style": {
+				"navigationBarTitleText": "门店列表",
+				"navigationStyle": "custom"
+			}
 		}
 
 	],
