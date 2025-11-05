@@ -24,6 +24,13 @@
 				"navigationBarTitleText": "收银台",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/pages/chatview/chatview",
+			"style": {
+				"navigationBarTitleText": "聊天页面",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"subPackages": [{
