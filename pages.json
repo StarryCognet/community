@@ -40,9 +40,23 @@
 			}
 		},
 		{
+			"path": "pages/pages/myhouse/myhouse",
+			"style": {
+				"navigationBarTitleText": "房屋认证",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/pages/changepassword/changepassword",
 			"style": {
 				"navigationBarTitleText": "修改密码",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/myhouse2/myhouse2",
+			"style": {
+				"navigationBarTitleText": "房屋认证2",
 				"navigationStyle": "custom"
 			}
 		},
@@ -54,6 +68,13 @@
 			}
 		},
 		{
+			"path": "pages/pages/myhouse3/myhouse3",
+			"style": {
+				"navigationBarTitleText": "房屋认证3",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/pages/membercenter/membercenter",
 			"style": {
 				"navigationBarTitleText": "会员中心",
@@ -61,9 +82,30 @@
 			}
 		},
 		{
+			"path": "pages/pages/myhouse4/myhouse4",
+			"style": {
+				"navigationBarTitleText": "房屋认证4",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/pages/storedetails/storedetails",
 			"style": {
 				"navigationBarTitleText": "门店详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/myhouse5/myhouse5",
+			"style": {
+				"navigationBarTitleText": "房屋认证5",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/storelist/storelist",
+			"style": {
+				"navigationBarTitleText": "门店列表",
 				"navigationStyle": "custom"
 			}
 		}
