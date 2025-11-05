@@ -31,6 +31,41 @@
 				"navigationBarTitleText": "注册-验证码",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/pages/myhouse/myhouse",
+			"style": {
+				"navigationBarTitleText": "房屋认证",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/myhouse2/myhouse2",
+			"style": {
+				"navigationBarTitleText": "房屋认证2",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/myhouse3/myhouse3",
+			"style": {
+				"navigationBarTitleText": "房屋认证3",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/myhouse4/myhouse4",
+			"style": {
+				"navigationBarTitleText": "房屋认证4",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/pages/myhouse5/myhouse5",
+			"style": {
+				"navigationBarTitleText": "房屋认证5",
+				"navigationStyle": "custom"
+			}
 		}
 
 	],
