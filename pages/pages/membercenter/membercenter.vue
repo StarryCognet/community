@@ -301,6 +301,7 @@ export default {
 			padding-left: 30rpx;
 			padding-top: 32rpx;
 			box-sizing: border-box;
+			// border: 1px solid #000;
 			.setting_box {
 				width: 100%;
 				height: 88rpx;
@@ -313,8 +314,10 @@ export default {
 				justify-content: space-between;
 				margin-bottom: 8rpx;
 				color: #7a7a7a;
+
 				.setting {
 					display: flex;
+					align-items: center;
 					image {
 						width: 34rpx;
 						height: 34rpx;

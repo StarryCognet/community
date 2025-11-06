@@ -18,10 +18,28 @@
 		</view>
 		<uni-list>
 			<uni-list :border="false">
-				<uni-list-chat title="高玲" avatar="/static/img/user-tx-1.png" note="收到" time="上午 8:18"></uni-list-chat>
-				<uni-list-chat title="张豪" avatar="/static/img/user.png" note="家里暖气不热了，能派人过来修吗" time="11月8日"></uni-list-chat>
-				<uni-list-chat title="张豪" avatar="/static/img/user.png" note="家里暖气不热了，能派人过来修吗" time="11月8日"></uni-list-chat>
-				<uni-list-chat title="张豪" avatar="/static/img/user.png" note="家里暖气不热了，能派人过来修吗" time="11月8日"></uni-list-chat>
+				<uni-list-chat to="/pages/pagesbusiness/chatview/chatview" title="高玲" avatar="/static/img/user-tx-1.png" note="收到" time="上午 8:18"></uni-list-chat>
+				<uni-list-chat
+					to="/pages/pagesbusiness/chatview/chatview"
+					title="张豪"
+					avatar="/static/img/user.png"
+					note="家里暖气不热了，能派人过来修吗"
+					time="11月8日"
+				></uni-list-chat>
+				<uni-list-chat
+					to="/pages/pagesbusiness/chatview/chatview"
+					title="张豪"
+					avatar="/static/img/user.png"
+					note="家里暖气不热了，能派人过来修吗"
+					time="11月8日"
+				></uni-list-chat>
+				<uni-list-chat
+					to="/pages/pagesbusiness/chatview/chatview"
+					title="张豪"
+					avatar="/static/img/user.png"
+					note="家里暖气不热了，能派人过来修吗"
+					time="11月8日"
+				></uni-list-chat>
 			</uni-list>
 		</uni-list>
 	</view>
@@ -33,46 +51,6 @@ export default {
 		return {
 			searchValue: '123123'
 		};
-	},
-	methods: {
-		search(res) {
-			uni.showToast({
-				title: '搜索：' + res.value,
-				icon: 'none'
-			});
-		},
-		input(res) {
-			console.log('----input:', res);
-		},
-		clear(res) {
-			uni.showToast({
-				title: 'clear事件，清除值为：' + res.value,
-				icon: 'none'
-			});
-		},
-		blur(res) {
-			uni.showToast({
-				title: 'blur事件，输入值为：' + res.value,
-				icon: 'none'
-			});
-		},
-		focus(e) {
-			uni.showToast({
-				title: 'focus事件，输出值为：' + e.value,
-				icon: 'none'
-			});
-		},
-		cancel(res) {
-			uni.showToast({
-				title: '点击取消，输入值为：' + res.value,
-				icon: 'none'
-			});
-		}
-	},
-	onBackPress() {
-		// #ifdef APP-PLUS
-		plus.key.hideSoftKeybord();
-		// #endif
 	}
 };
 </script>
