@@ -110,6 +110,13 @@
 			}
 		},
 		{
+			"path": "pages/pages/myhouse6/myhouse6",
+			"style": {
+				"navigationBarTitleText": "房屋认证6",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/pages/news/news",
 			"style": {
 				"navigationBarTitleText": "消息",
