@@ -14,8 +14,8 @@
 				<span>获取验证码</span>
 			</view>
 		</view>
-		<button>登录</button>
-		<p>没有账号，立即注册</p>
+		<button @click="gohome">登录</button>
+		<p @click="gosignupcode">没有账号，立即注册</p>
 	</view>
 </template>
 
@@ -23,6 +23,18 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		gohome() {
+			uni.switchTab({
+				url: '/pages/pages/home/home'
+			});
+		},
+		gosignupcode() {
+			uni.navigateTo({
+				url: '/pages/pages/signupcode/signupcode'
+			});
+		}
 	}
 };
 </script>

@@ -1,10 +1,6 @@
 <template>
 	<view>
-<<<<<<< HEAD
-		<uni-nav-bar :border="false" left-icon="left" left-text="返回" title="报修" @clickLeft="backIndex"></uni-nav-bar>
-=======
 		<uni-nav-bar :border="false" left-icon="left" left-text="返回" @clickLeft="backIndex" title="报修"></uni-nav-bar>
->>>>>>> wang
 		<view class="content">
 			<view class="item">
 				<p>类型</p>

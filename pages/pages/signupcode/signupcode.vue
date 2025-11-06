@@ -1,6 +1,14 @@
 <template>
 	<view>
-		<uni-nav-bar :border="false" style="position: relative; z-index: 2" color="#fff" background-color="transparent" left-icon="left" title="用户注册"></uni-nav-bar>
+		<uni-nav-bar
+			:border="false"
+			style="position: relative; z-index: 2"
+			color="#fff"
+			@clickLeft="backIndex"
+			background-color="transparent"
+			left-icon="left"
+			title="用户注册"
+		></uni-nav-bar>
 		<image class="bgi" src="/static/img/bgi.png" mode=""></image>
 		<view class="content">
 			<!-- 			<view class="content-login">
@@ -34,6 +42,12 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		}
 	}
 };
 </script>
@@ -105,7 +119,7 @@ p {
 .radio {
 	margin: 0 30rpx;
 	text {
-		font-size: 25rpx;
+		font-size: 10rpx !important;
 		span {
 			color: #42b1ff;
 		}
