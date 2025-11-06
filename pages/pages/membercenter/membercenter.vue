@@ -51,32 +51,28 @@
 			<view class="bottom">
 				<view class="setting_box" @click="gowarrantyrecord">
 					<view class="setting">
-						<!-- <image src="/static/images/tubiao_03.png" mode=""></image> -->
-						<view class="iconfont icon-tubiao_baoxiujilu"></view>
-						<text></text>
+						<view style="font-size: 35rpx; font-weight: 800" class="iconfont icon-tubiao_baoxiujilu"></view>
 						<view class="text">报修记录</view>
 					</view>
 					<view class="iconfont icon-youjiantou"></view>
 				</view>
 				<view class="setting_box" @click="gofeedbackrecord">
 					<view class="setting">
-						<!-- <image src="/static/images/tubiao_12.png" mode=""></image> -->
-						<view class="iconfont icon-mti-fankuijilu"></view>
+						<view style="font-size: 30rpx" class="iconfont icon-mti-fankuijilu"></view>
 						<view class="text">反馈记录</view>
 					</view>
 					<view class="iconfont icon-youjiantou"></view>
 				</view>
 				<view class="setting_box" @click="gorelation">
 					<view class="setting">
-						<!-- <image src="/static/images/tubiao_09.png" mode=""></image> -->
-						<view class="iconfont icon-xiaoxi2"></view>
+						<view style="font-size: 35rpx; font-weight: 800" class="iconfont icon-xiaoxi2"></view>
 						<view class="text">联系物业</view>
 					</view>
 					<view class="iconfont icon-youjiantou"></view>
 				</view>
 				<view class="setting_box" @click="gomembersettings">
 					<view class="setting">
-						<view class="iconfont icon-zhanghaoshezhi"></view>
+						<view style="font-size: 30rpx" class="iconfont icon-zhanghaoshezhi"></view>
 						<view class="text">账号设置</view>
 					</view>
 					<view class="iconfont icon-youjiantou"></view>

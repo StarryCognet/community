@@ -13,12 +13,12 @@
 		<view class="content">
 			<view class="header">
 				<view class="header-top">
-					<view class="top-dw">
-						<uni-icons custom-prefix="iconfont" type="icon-dingwei" size="24"></uni-icons>
+					<view class="top-dw" @click="goAboutus">
+						<uni-icons color="#fff" custom-prefix="iconfont" type="icon-dizhi" style="font-size: 30rpx"></uni-icons>
 						<span>首尔甜城</span>
 					</view>
 					<view class="top-ss">
-						<uni-icons custom-prefix="iconfont" type="icon-sousuo" size="20" class="search-icon"></uni-icons>
+						<uni-icons custom-prefix="iconfont" type="icon-sousuo" style="font-size: 30rpx" class="search-icon"></uni-icons>
 						<input type="text" placeholder="搜索关键字" />
 					</view>
 				</view>
@@ -61,7 +61,7 @@
 					</p>
 					<p style="width: 90rpx">
 						更多
-						<uni-icons custom-prefix="iconfont" type="icon-youjiantou" size="15"></uni-icons>
+						<uni-icons custom-prefix="iconfont" type="icon-youjiantou" style="font-size: 30rpx"></uni-icons>
 					</p>
 				</view>
 				<image src="/static/img/zhong.png" alt="" mode="widthFix"></image>
@@ -158,6 +158,11 @@ export default {
 		goConsult() {
 			uni.navigateTo({
 				url: '/pages/pagesbusiness/consult/consult'
+			});
+		},
+		goAboutus() {
+			uni.navigateTo({
+				url: '/pages/pagesmember/aboutus/aboutus'
 			});
 		}
 	}
