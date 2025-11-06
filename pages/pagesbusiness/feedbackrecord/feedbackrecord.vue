@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="top">
-			<uni-nav-bar :border="false" left-icon="left" left-text="返回" title="反馈记录"></uni-nav-bar>
+			<uni-nav-bar :border="false" left-icon="left" left-text="返回" title="反馈记录" @clickLeft="backIndex"></uni-nav-bar>
 			<view class="buttom">
 				<view class="itemm" style="color: #0080fe">未处理</view>
 				<view class="itemm">已处理</view>
@@ -86,6 +86,12 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		}
 	}
 };
 </script>

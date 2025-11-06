@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar left-icon="left" left-text="返回" title="门店列表" />
+		<uni-nav-bar left-icon="left" left-text="返回" title="门店列表" @clickLeft="backIndex" />
 		<div class="conmt">
 			<div class="head">
 				<div class="head-left">
@@ -13,7 +13,7 @@
 				</div>
 			</div>
 			<div class="conent">
-				<div class="conent-box">
+				<div class="conent-box" @click="goStoredetails">
 					<image src="/static/img/nr-xc.png" mode=""></image>
 					<div class="con-zi">
 						<h2>吉野家牛肉饭</h2>
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<div class="conent">
-				<div class="conent-box">
+				<div class="conent-box" @click="goStoredetails">
 					<image src="/static/img/nr-xc.png" mode=""></image>
 					<div class="con-zi">
 						<h2>吉野家牛肉饭</h2>
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="conent">
-				<div class="conent-box">
+				<div class="conent-box" @click="goStoredetails">
 					<image src="/static/img/nr-xc.png" mode=""></image>
 					<div class="con-zi">
 						<h2>吉野家牛肉饭</h2>
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="conent">
-				<div class="conent-box">
+				<div class="conent-box" @click="goStoredetails">
 					<image src="/static/img/nr-xc.png" mode=""></image>
 					<div class="con-zi">
 						<h2>吉野家牛肉饭</h2>
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 			<div class="conent">
-				<div class="conent-box">
+				<div class="conent-box" @click="goStoredetails">
 					<image src="/static/img/nr-xc.png" mode=""></image>
 					<div class="con-zi">
 						<h2>吉野家牛肉饭</h2>
@@ -63,7 +63,7 @@
 				</div>
 			</div>
 			<div class="conent">
-				<div class="conent-box">
+				<div class="conent-box" @click="goStoredetails">
 					<image src="/static/img/nr-xc.png" mode=""></image>
 					<div class="con-zi">
 						<h2>吉野家牛肉饭</h2>
@@ -73,7 +73,7 @@
 				</div>
 			</div>
 			<div class="conent">
-				<div class="conent-box">
+				<div class="conent-box" @click="goStoredetails">
 					<image src="/static/img/nr-xc.png" mode=""></image>
 					<div class="con-zi">
 						<h2>吉野家牛肉饭</h2>
@@ -90,6 +90,17 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		},
+		goStoredetails() {
+			uni.navigateTo({
+				url: '/pages/pages/storedetails/storedetails'
+			});
+		}
 	}
 };
 </script>

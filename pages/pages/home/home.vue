@@ -16,25 +16,25 @@
 				</view>
 				<view class="header-mian">
 					<view class="mian-item">
-						<view class="item-img">
+						<view class="item-img" @click="goLivingpayment">
 							<image src="/static/img/top-1.png" alt="" mode="widthFix"></image>
 						</view>
 						<p>生活缴费</p>
 					</view>
 					<view class="mian-item">
-						<view class="item-img">
+						<view class="item-img" @click="goWarranty">
 							<image src="/static/img/top-2.png" alt="" mode="widthFix"></image>
 						</view>
 						<p>物业报修</p>
 					</view>
 					<view class="mian-item">
-						<view class="item-img">
+						<view class="item-img" @click="goProblemfeedback">
 							<image src="/static/img/top-3.png" alt="" mode="widthFix"></image>
 						</view>
 						<p>问题反馈</p>
 					</view>
 					<view class="mian-item">
-						<view class="item-img">
+						<view class="item-img" @click="goRelation">
 							<image src="/static/img/top-4.png" alt="" mode="widthFix"></image>
 						</view>
 						<p>我要帮助</p>
@@ -60,7 +60,7 @@
 			</view>
 			<view class="lift">
 				<h2>生活门店</h2>
-				<view class="lift-img">
+				<view class="lift-img" @click="goStorelist">
 					<image src="/static/img/zhong2.png" alt="" mode="widthFix"></image>
 				</view>
 			</view>
@@ -70,21 +70,21 @@
 					<uni-icons custom-prefix="iconfont" type="" size="20"></uni-icons>
 				</h2>
 				<view class="zx-items">
-					<view class="item">
+					<view class="item" @click="goConsult">
 						<view class="item-title">
 							<h2>关于调整我行ATM跨行取现手续费收费标准的公式</h2>
 							<p>2021-07-23</p>
 						</view>
 						<image src="/static/img/item-1.png" alt="" mode="widthFix"></image>
 					</view>
-					<view class="item">
+					<view class="item" @click="goConsult">
 						<view class="item-title">
 							<h2>关于调整我行ATM跨行取现手续费收费标准的公式</h2>
 							<p>2021-07-23</p>
 						</view>
 						<image src="/static/img/item-1.png" alt="" mode="widthFix"></image>
 					</view>
-					<view class="item">
+					<view class="item" @click="goConsult">
 						<view class="item-title">
 							<h2>关于调整我行ATM跨行取现手续费收费标准的公式</h2>
 							<p>2021-07-23</p>
@@ -95,7 +95,7 @@
 			</view>
 		</view>
 
-		<view class="tap">
+		<!-- 		<view class="tap">
 			<view class="tap-item">
 				<image src="/static/img/bot-1.png" alt="" mode="widthFix"></image>
 				<p>主页</p>
@@ -112,9 +112,49 @@
 				<image src="/static/img/bot-4.png" alt="" mode="widthFix"></image>
 				<p>主页</p>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
+
+<script>
+export default {
+	data() {
+		return {};
+	},
+	methods: {
+		goLivingpayment() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/livingpayment/livingpayment'
+			});
+		},
+		goWarranty() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/warranty/warranty'
+			});
+		},
+		goProblemfeedback() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/problemfeedback/problemfeedback'
+			});
+		},
+		goRelation() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/relation/relation'
+			});
+		},
+		goStorelist() {
+			uni.navigateTo({
+				url: '/pages/pages/storelist/storelist'
+			});
+		},
+		goConsult() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/consult/consult'
+			});
+		}
+	}
+};
+</script>
 
 <style lang="less" scoped>
 .page-container {

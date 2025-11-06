@@ -1,6 +1,14 @@
 <template>
 	<view class="page-container">
-		<uni-nav-bar :border="false" style="position: absolute; top: 0; left: 0; z-index: 2" color="#fff" background-color="transparent" left-icon="left" title=""></uni-nav-bar>
+		<uni-nav-bar
+			:border="false"
+			style="position: absolute; top: 0; left: 0; z-index: 2"
+			color="#fff"
+			background-color="transparent"
+			left-icon="left"
+			title=""
+			@clickLeft="backIndex"
+		></uni-nav-bar>
 		<view class="top">
 			<view class="top_box">
 				<view class="box_left">
@@ -42,7 +50,19 @@
 		</view>
 	</view>
 </template>
-
+<script>
+export default {
+	data() {
+		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		}
+	}
+};
+</script>
 <style lang="less" scoped>
 .page-container {
 	width: 100%;

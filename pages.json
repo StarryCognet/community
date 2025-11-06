@@ -116,8 +116,38 @@
 				"navigationStyle": "custom"
 			}
 		}
-
 	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/pages/home/home",
+				"text": "主页",
+				"iconPath": "/static/img/bot-l-1.png",
+				"selectedIconPath": "/static/img/bot-1.png"
+			},
+			{
+				"pagePath": "pages/pages/storelist/storelist",
+				"text": "商店",
+				"iconPath": "/static/img/bot-l-2.png",
+				"selectedIconPath": "/static/img/bot-2.png"
+			},
+			{
+				"pagePath": "pages/pages/news/news",
+				"text": "消息",
+				"iconPath": "/static/img/bot-l-3.png",
+				"selectedIconPath": "/static/img/bot-3.png"
+			},
+			{
+				"pagePath": "pages/pages/membercenter/membercenter",
+				"text": "我的",
+				"iconPath": "/static/img/bot-l-4.png",
+				"selectedIconPath": "/static/img/bot-4.png"
+			}
+		]
+	},
 	"subPackages": [{
 			"root": "pages/pagesmember",
 			"pages": [{
@@ -284,7 +314,7 @@
 				{
 					"path": "consult/consult",
 					"style": {
-						"navigationBarTitleText": "咨询",
+						"navigationBarTitleText": "资讯",
 						"navigationStyle": "custom"
 					}
 				},
