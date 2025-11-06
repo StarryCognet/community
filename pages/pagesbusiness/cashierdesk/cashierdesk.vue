@@ -30,7 +30,7 @@
 			</view>
 		</view>
 		<view class="but">
-			<button>微信支付￥360.00</button>
+			<button @click="gohome">微信支付￥360.00</button>
 		</view>
 	</view>
 </template>
@@ -44,6 +44,11 @@ export default {
 		backIndex() {
 			const pages = getCurrentPages();
 			uni.navigateBack();
+		},
+		gohome() {
+			uni.switchTab({
+				url: '/pages/pages/home/home'
+			});
 		}
 	}
 };
