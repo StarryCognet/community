@@ -98,7 +98,7 @@ export default {
 		},
 		gomyvehicle() {
 			uni.navigateTo({
-				url: '/pages/pagesmember/myvehicle/myvehicle'
+				url: '/pages/pagesmember/myvehicle2/myvehicle2'
 			});
 		},
 		gopaymentrecords() {
@@ -124,6 +124,11 @@ export default {
 		gomembersettings() {
 			uni.navigateTo({
 				url: '/pages/pagesmember/member-settings/member-settings'
+			});
+		},
+		gorelation() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/relation/relation'
 			});
 		}
 	}

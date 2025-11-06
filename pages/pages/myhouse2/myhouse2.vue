@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar left-icon="left" left-text="返回" title="房屋认证" />
+		<uni-nav-bar left-icon="left" left-text="返回" @clickLeft="backIndex" title="房屋认证" />
 		<div class="conmt">
 			<div class="conmt-text">
 				<p>清水湾</p>
@@ -33,6 +33,12 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		}
 	}
 };
 </script>

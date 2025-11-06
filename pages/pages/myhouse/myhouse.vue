@@ -13,7 +13,7 @@
 						<uni-icons class="biao" style="color: #898989" custom-prefix="iconfont" type="icon-youjiantou" size="26rpx"></uni-icons>
 					</div>
 				</div>
-				<div class="conmt-box">
+				<div class="conmt-box" @click="gomyhouse2">
 					<p>楼栋房号</p>
 					<div class="cont">
 						<span>请选择楼栋信息</span>
@@ -63,6 +63,11 @@ export default {
 		gomyhouse4() {
 			uni.navigateTo({
 				url: '/pages/pages/myhouse5/myhouse5'
+			});
+		},
+		gomyhouse2() {
+			uni.navigateTo({
+				url: '/pages/pages/myhouse2/myhouse2'
 			});
 		}
 	}
