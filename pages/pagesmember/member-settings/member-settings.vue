@@ -9,7 +9,7 @@
 					<p>修改手机号</p>
 				</div>
 				<div class="box">
-					<span>></span>
+					<uni-icons custom-prefix="iconfont" type="icon-youjiantou" size="15"></uni-icons>
 				</div>
 			</div>
 			<div class="conmt-top" @click="gochangepassword">
@@ -18,7 +18,7 @@
 					<p>修改密码</p>
 				</div>
 				<div class="box">
-					<span>></span>
+					<uni-icons custom-prefix="iconfont" type="icon-youjiantou" size="15"></uni-icons>
 				</div>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 				</div>
 				<div class="box">
 					<p>12M</p>
-					<span>></span>
+					<uni-icons custom-prefix="iconfont" type="icon-youjiantou" size="15"></uni-icons>
 				</div>
 			</div>
 			<div class="cont-top">
@@ -40,7 +40,7 @@
 				</div>
 				<div class="box">
 					<p>1.0.0</p>
-					<span>></span>
+					<uni-icons custom-prefix="iconfont" type="icon-youjiantou" size="15"></uni-icons>
 				</div>
 			</div>
 		</div>

@@ -18,6 +18,6 @@ export default {
 * {
 	padding: 0;
 	margin: 0;
-	font-size: 20rpx;
+	font-size: 25rpx;
 }
 </style>

@@ -79,13 +79,16 @@ page {
 			padding: 30rpx;
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 			view {
 				display: flex;
-				justify-content: space-between;
 				align-items: center;
-				width: 220rpx;
+				width: 200rpx;
 				font-size: 28rpx;
-				font-weight: 800;
+				// font-weight: 800;
+				span {
+					margin-left: 20rpx;
+				}
 			}
 		}
 	}

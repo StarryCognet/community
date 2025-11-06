@@ -45,15 +45,15 @@
 
 		<view class="content-bot">
 			<view class="con">
-				<view class="con-top">
+				<view class="con-top" @click="goConsult">
 					<image src="/static/img/totiao.png" alt="" mode="widthFix"></image>
 					<p>
 						关于我行对符合条件的账户
 						<span></span>
 					</p>
-					<p>
+					<p style="width: 80rpx">
 						更多
-						<uni-icons custom-prefix="iconfont" type="icon-right" size="20"></uni-icons>
+						<uni-icons custom-prefix="iconfont" type="icon-youjiantou" size="15"></uni-icons>
 					</p>
 				</view>
 				<image src="/static/img/zhong.png" alt="" mode="widthFix"></image>
@@ -292,14 +292,15 @@ export default {
 				}
 
 				p {
+					width: 320rpx;
 					span {
 						background-color: red;
 						display: inline-block;
 						padding: 8rpx;
 						border-radius: 50rpx;
 						position: relative;
-						left: 40rpx;
-						bottom: 5rpx;
+						left: 10rpx;
+						bottom: -2rpx;
 						width: 8rpx;
 						height: 8rpx;
 					}

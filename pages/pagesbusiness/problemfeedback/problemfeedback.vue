@@ -27,22 +27,22 @@
 				<textarea class="text" cols="10" rows="10" placeholder="请输入报修问题，以便维修人员尽快为您解决"></textarea>
 			</view>
 			<view class="picture">
-				<view class="itemm">
+				<view class="item">
 					<uni-icons style="color: #898989" type="camera" size="35"></uni-icons>
 				</view>
-				<view class="itemm">
+				<view class="item">
 					<view class="chuo">
-						<uni-icons style="color: #fff" type="closeempty" size="14"></uni-icons>
+						<uni-icons style="color: #fff" type="closeempty" size="12"></uni-icons>
 					</view>
 				</view>
-				<view class="itemm">
+				<view class="item">
 					<view class="chuo">
-						<uni-icons style="color: #fff" type="closeempty" size="14"></uni-icons>
+						<uni-icons style="color: #fff" type="closeempty" size="12"></uni-icons>
 					</view>
 				</view>
-				<view class="itemm">
+				<view class="item">
 					<view class="chuo">
-						<uni-icons style="color: #fff" type="closeempty" size="14"></uni-icons>
+						<uni-icons style="color: #fff" type="closeempty" size="12"></uni-icons>
 					</view>
 				</view>
 			</view>
@@ -101,7 +101,7 @@ export default {
 	height: 100rpx;
 	display: flex;
 
-	.itemm {
+	.item {
 		width: 100rpx;
 		height: 100rpx;
 		border: 1rpx solid #b6b6b6;
@@ -125,7 +125,8 @@ export default {
 			line-height: 30rpx;
 			font-size: 10rpx;
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 }
