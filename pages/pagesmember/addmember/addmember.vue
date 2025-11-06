@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-nav-bar :border="false" left-icon="left" left-text="返回" title="添加居民" />
+    <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false" left-icon="left" left-text="返回" @clickLeft="backIndex" title="添加居民" />
     <div class="conmt">
       <div class="conmt-text">
         <p>居民信息</p>
@@ -38,7 +38,7 @@
             <span>请填写联系电话</span>
           </div>
         </div>
-        <button>提交</button>
+        <button @click="backIndex">提交</button>
       </div>
     </div>
   </view>
@@ -48,6 +48,12 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    backIndex() {
+      const pages = getCurrentPages();
+      uni.navigateBack();
+    },
   },
 };
 </script>

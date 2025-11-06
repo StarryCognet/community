@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-nav-bar :border="false" left-icon="left" left-text="返回" right-text="添加" title="家庭成员" />
+    <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false" left-icon="left" left-text="返回" @clickRight="goaddmember" @clickLeft="backIndex" right-text="添加" title="家庭成员" />
     <div class="conmt-text">
       <p>信息修改请与社区管理员联系</p>
     </div>
@@ -77,6 +77,17 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    backIndex() {
+      const pages = getCurrentPages();
+      uni.navigateBack();
+    },
+    goaddmember() {
+      uni.navigateTo({
+        url: "/pages/pagesmember/addmember/addmember",
+      });
+    },
   },
 };
 </script>

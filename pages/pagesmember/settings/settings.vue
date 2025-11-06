@@ -1,6 +1,6 @@
 <template>
   <view>
-    <!-- <uni-nav-bar :border="false"  title="导航栏组件"></uni-nav-bar> -->
+    <!-- <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false"  title="导航栏组件"></uni-nav-bar> -->
     <div class="conmt">
       <div class="head">
         <div class="head-top">

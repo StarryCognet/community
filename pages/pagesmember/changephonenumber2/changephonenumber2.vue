@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-nav-bar :border="false" left-icon="left" left-text="返回" title="修改手机号" />
+    <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false" left-icon="left" left-text="返回" title="修改手机号" />
     <div class="conmt">
       <div class="conmt-top">
         <div class="conmt-box">

@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-nav-bar :border="false" left-icon="left" title="聊天详情"></uni-nav-bar>
+    <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false" left-icon="left" @clickLeft="backIndex" title="聊天详情"></uni-nav-bar>
     <view class="tx">
       <view class="tx-nr">
         <image src="/static/img/chatdetails-tx.png" mode=""></image>
@@ -28,6 +28,12 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    backIndex() {
+      const pages = getCurrentPages();
+      uni.navigateBack();
+    },
   },
 };
 </script>

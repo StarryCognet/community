@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-nav-bar :border="false" left-icon="left" left-text="返回" right-text="添加车辆" title="我的车辆" />
+    <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false" left-icon="left" left-text="返回" right-text="添加车辆" title="我的车辆" />
     <div class="conmt">
       <img src="../../../static/img/myvehicle.png" alt="" />
       <div class="check">

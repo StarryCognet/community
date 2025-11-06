@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-nav-bar :border="false" left-icon="left" left-text="返回" right-text="添加" title="我的房屋" />
+    <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false" left-icon="left" left-text="返回" right-text="添加" @clickLeft="backIndex" @clickRight="goaddmember" title="我的房屋" />
 
     <div class="conmt">
       <div class="conmt-box">
@@ -69,6 +69,17 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    backIndex() {
+      const pages = getCurrentPages();
+      uni.navigateBack();
+    },
+    goaddmember() {
+      uni.navigateTo({
+        url: "/pages/pages/myhouse/myhouse",
+      });
+    },
   },
 };
 </script>

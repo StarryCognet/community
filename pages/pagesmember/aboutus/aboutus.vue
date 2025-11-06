@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uni-nav-bar :border="false" left-icon="left" left-text="返回" title="关于我们" />
+    <uni-nav-bar leftWidth="110rpx" rightWidth="110rpx" :border="false" left-icon="left" left-text="返回" title="关于我们" />
     <div class="conmt">
       <image src="../../../static/img/aboutus.png" mode=""></image>
       <p>扫一扫下载 甜城app</p>
