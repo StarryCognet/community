@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar left-icon="left" left-text="返回" title="房屋认证" />
+		<uni-nav-bar left-icon="left" left-text="返回" @clickLeft="backIndex" title="房屋认证" />
 		<div class="conmt">
 			<div class="conmt-text">
 				<p>房屋信息</p>
@@ -44,7 +44,7 @@
 						<span>13522568755</span>
 					</div>
 				</div>
-				<button>提交</button>
+				<button @click="gomyhouse4">提交</button>
 			</div>
 		</div>
 	</view>
@@ -54,6 +54,17 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		},
+		gomyhouse4() {
+			uni.navigateTo({
+				url: '/pages/pages/myhouse5/myhouse5'
+			});
+		}
 	}
 };
 </script>

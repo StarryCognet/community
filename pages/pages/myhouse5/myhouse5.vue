@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar left-icon="left" left-text="返回" title="房屋认证" />
+		<uni-nav-bar left-icon="left" left-text="返回" @clickLeft="backIndex" title="房屋认证" />
 		<div class="conmt">
 			<div class="box">
 				<uni-icons class="biao" style="color: #fff" custom-prefix="iconfont" type="icon-duihao" size="60rpx"></uni-icons>
@@ -12,7 +12,7 @@
 				<p>等待物业审核!</p>
 			</div>
 		</div>
-		<button>返回首页</button>
+		<button @click="gohome">返回首页</button>
 	</view>
 </template>
 
@@ -20,6 +20,17 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		},
+		gohome() {
+			uni.switchTab({
+				url: '/pages/pages/home/home'
+			});
+		}
 	}
 };
 </script>

@@ -22,29 +22,29 @@
 			</view>
 		</view>
 		<view class="content_box">
-			<view class="smallbox" @click="goLivingpayment">
+			<view class="smallbox" @click="gomyhouse">
 				<view class="content">
 					<image src="/static/img/vip-top-1.png" mode=""></image>
 				</view>
-				<view class="text">生活缴费</view>
+				<view class="text">我的房屋</view>
 			</view>
-			<view class="smallbox" @click="goWarranty">
+			<view class="smallbox" @click="gomyvehicle">
 				<view class="content_bx">
 					<image src="/static/img/vip-top-2.png" mode=""></image>
 				</view>
-				<view class="text">物业报修</view>
+				<view class="text">我的车辆</view>
 			</view>
-			<view class="smallbox" @click="goproblemfeedback">
+			<view class="smallbox" @click="gopaymentrecords">
 				<view class="content_fk">
 					<image src="/static/img/vip-top-3.png" mode=""></image>
 				</view>
-				<view class="text">问题反馈</view>
+				<view class="text">我的缴费</view>
 			</view>
-			<view class="smallbox" @click="gorelation">
+			<view class="smallbox" @click="gofamilymembers">
 				<view class="content_bz">
 					<image src="/static/img/vip-top-4.png" mode=""></image>
 				</view>
-				<view class="text">我要帮助</view>
+				<view class="text">家庭成员</view>
 			</view>
 		</view>
 		<view class="bottom_box">
@@ -91,24 +91,24 @@ export default {
 		return {};
 	},
 	methods: {
-		goLivingpayment() {
+		gomyhouse() {
 			uni.navigateTo({
-				url: '/pages/pagesbusiness/livingpayment/livingpayment'
+				url: '/pages/pagesmember/myhouse/myhouse'
 			});
 		},
-		goWarranty() {
+		gomyvehicle() {
 			uni.navigateTo({
-				url: '/pages/pagesbusiness/warranty/warranty'
+				url: '/pages/pagesmember/myvehicle/myvehicle'
 			});
 		},
-		goproblemfeedback() {
+		gopaymentrecords() {
 			uni.navigateTo({
-				url: '/pages/pagesbusiness/problemfeedback/problemfeedback'
+				url: '/pages/pagesbusiness/paymentrecords/paymentrecords'
 			});
 		},
-		gorelation() {
+		gofamilymembers() {
 			uni.navigateTo({
-				url: '/pages/pagesbusiness/relation/relation'
+				url: '/pages/pagesmember/familymembers/familymembers'
 			});
 		},
 		gowarrantyrecord() {

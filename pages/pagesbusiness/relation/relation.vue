@@ -2,7 +2,7 @@
 	<view>
 		<uni-nav-bar :border="false" left-icon="left" left-text="返回" @clickLeft="backIndex" title="我要帮助"></uni-nav-bar>
 		<view class="top">社区管理员</view>
-		<view class="item">
+		<view class="item" @click="gochatview">
 			<view class="item_left">
 				<view class="tp">
 					<image src="/static/img/usertx-1.png" mode=""></image>
@@ -17,7 +17,7 @@
 			</view>
 		</view>
 
-		<view class="item">
+		<view class="item" @click="gochatview">
 			<view class="item_left">
 				<view class="tp">
 					<image src="/static/img/usertx-3.png" mode=""></image>
@@ -43,6 +43,11 @@ export default {
 		backIndex() {
 			const pages = getCurrentPages();
 			uni.navigateBack();
+		},
+		gochatview() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/chatview/chatview'
+			});
 		}
 	}
 };

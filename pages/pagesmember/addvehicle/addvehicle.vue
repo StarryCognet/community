@@ -1,9 +1,10 @@
 <template>
 	<view>
+		<uni-nav-bar :border="false" left-icon="left" @clickLeft="backIndex" left-text="返回" title="添加车辆" />
 		<div class="conmt">
 			<img src="../../../static/img/myvehicle.png" alt="" />
 			<input type="text" placeholder="请输入车牌号" name="" id="" />
-			<button>添加</button>
+			<button @click="backIndex">添加</button>
 		</div>
 	</view>
 </template>
@@ -12,6 +13,12 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		}
 	}
 };
 </script>
