@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar :border="false" style="position: relative; z-index: 2" color="#fff" background-color="transparent" left-icon="left" title="登录"></uni-nav-bar>
+		<uni-nav-bar :border="false" style="position: relative; z-index: 2" color="#fff" background-color="transparent" title="登录"></uni-nav-bar>
 		<image class="bgi" src="/static/img/bgi.png" mode=""></image>
 		<view class="content">
 			<view class="content-login">

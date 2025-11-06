@@ -4,7 +4,7 @@
 			<view class="title">
 				<view class="left"></view>
 				<view class="conter">会员中心</view>
-				<view class="right">
+				<view class="right" @click="gomembersettings">
 					<view class="iconfont icon-shezhi"></view>
 				</view>
 			</view>
@@ -22,25 +22,25 @@
 			</view>
 		</view>
 		<view class="content_box">
-			<view class="smallbox">
+			<view class="smallbox" @click="goLivingpayment">
 				<view class="content">
 					<image src="/static/img/vip-top-1.png" mode=""></image>
 				</view>
 				<view class="text">生活缴费</view>
 			</view>
-			<view class="smallbox">
+			<view class="smallbox" @click="goWarranty">
 				<view class="content_bx">
 					<image src="/static/img/vip-top-2.png" mode=""></image>
 				</view>
 				<view class="text">物业报修</view>
 			</view>
-			<view class="smallbox">
+			<view class="smallbox" @click="goproblemfeedback">
 				<view class="content_fk">
 					<image src="/static/img/vip-top-3.png" mode=""></image>
 				</view>
 				<view class="text">问题反馈</view>
 			</view>
-			<view class="smallbox">
+			<view class="smallbox" @click="gorelation">
 				<view class="content_bz">
 					<image src="/static/img/vip-top-4.png" mode=""></image>
 				</view>
@@ -49,7 +49,7 @@
 		</view>
 		<view class="bottom_box">
 			<view class="bottom">
-				<view class="setting_box">
+				<view class="setting_box" @click="gowarrantyrecord">
 					<view class="setting">
 						<!-- <image src="/static/images/tubiao_03.png" mode=""></image> -->
 						<view class="iconfont icon-tubiao_baoxiujilu"></view>
@@ -58,7 +58,7 @@
 					</view>
 					<view class="iconfont icon-youjiantou"></view>
 				</view>
-				<view class="setting_box">
+				<view class="setting_box" @click="gofeedbackrecord">
 					<view class="setting">
 						<!-- <image src="/static/images/tubiao_12.png" mode=""></image> -->
 						<view class="iconfont icon-mti-fankuijilu"></view>
@@ -66,7 +66,7 @@
 					</view>
 					<view class="iconfont icon-youjiantou"></view>
 				</view>
-				<view class="setting_box">
+				<view class="setting_box" @click="gorelation">
 					<view class="setting">
 						<!-- <image src="/static/images/tubiao_09.png" mode=""></image> -->
 						<view class="iconfont icon-xiaoxi2"></view>
@@ -74,7 +74,7 @@
 					</view>
 					<view class="iconfont icon-youjiantou"></view>
 				</view>
-				<view class="setting_box">
+				<view class="setting_box" @click="gomembersettings">
 					<view class="setting">
 						<view class="iconfont icon-zhanghaoshezhi"></view>
 						<view class="text">账号设置</view>
@@ -85,7 +85,50 @@
 		</view>
 	</view>
 </template>
-
+<script>
+export default {
+	data() {
+		return {};
+	},
+	methods: {
+		goLivingpayment() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/livingpayment/livingpayment'
+			});
+		},
+		goWarranty() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/warranty/warranty'
+			});
+		},
+		goproblemfeedback() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/problemfeedback/problemfeedback'
+			});
+		},
+		gorelation() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/relation/relation'
+			});
+		},
+		gowarrantyrecord() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/warrantyrecord/warrantyrecord'
+			});
+		},
+		gofeedbackrecord() {
+			uni.navigateTo({
+				url: '/pages/pagesbusiness/feedbackrecord/feedbackrecord'
+			});
+		},
+		gomembersettings() {
+			uni.navigateTo({
+				url: '/pages/pagesmember/member-settings/member-settings'
+			});
+		}
+	}
+};
+</script>
 <style lang="less" scoped>
 .box {
 	background-color: #f6f6f6;
