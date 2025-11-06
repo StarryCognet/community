@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar left-icon="left" left-text="返回" title="门店列表" @clickLeft="backIndex" />
+		<uni-nav-bar title="门店列表" @clickLeft="backIndex" />
 		<div class="conmt">
 			<div class="head">
 				<div class="head-left">

@@ -143,7 +143,7 @@ export default {
 			});
 		},
 		goStorelist() {
-			uni.navigateTo({
+			uni.switchTab({
 				url: '/pages/pages/storelist/storelist'
 			});
 		},

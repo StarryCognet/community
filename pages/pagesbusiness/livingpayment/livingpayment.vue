@@ -1,21 +1,13 @@
 <template>
 	<view class="page">
-		<<<<<<< HEAD
-		<uni-nav-bar :border="false" left-icon="left" left-text="返回" title="生活缴费" right-text="缴费记录" @clickLeft="backIndex"></uni-nav-bar>
-		=======
 		<uni-nav-bar :border="false" left-icon="left" left-text="返回" @clickLeft="backIndex" title="生活缴费" right-text="缴费记录" @clickRight="gopaymentrecords"></uni-nav-bar>
-		>>>>>>> wang
 		<view class="combobox">
 			清水湾1号楼1单元2203
 			<uni-icons custom-prefix="iconfont" type="icon-xialajiantou" size="18"></uni-icons>
 		</view>
 		<view class="jiaofei">
 			<p>应缴费:360.00元</p>
-			<<<<<<< HEAD
-			<button>缴费</button>
-			=======
 			<button @click="gocashierdesk">缴费</button>
-			>>>>>>> wang
 		</view>
 		<view class="content">
 			<view class="title">物业费账单</view>
