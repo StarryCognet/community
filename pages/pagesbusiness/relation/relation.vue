@@ -1,6 +1,10 @@
 <template>
 	<view>
+<<<<<<< HEAD
 		<uni-nav-bar :border="false" left-icon="left" left-text="返回" title="我要帮助" @clickLeft="backIndex"></uni-nav-bar>
+=======
+		<uni-nav-bar :border="false" left-icon="left" left-text="返回" @clickLeft="backIndex" title="我要帮助"></uni-nav-bar>
+>>>>>>> wang
 		<view class="top">社区管理员</view>
 		<view class="item">
 			<view class="item_left">

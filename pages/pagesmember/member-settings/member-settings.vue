@@ -1,7 +1,8 @@
 <template>
 	<view>
+		<uni-nav-bar :border="false" left-icon="left" left-text="返回" @clickLeft="backIndex" title="会员设置"></uni-nav-bar>
 		<div class="conmt">
-			<div class="conmt-top">
+			<div class="conmt-top" @click="gochangephonenumber">
 				<div class="conmt-box">
 					<uni-icons class="biao" style="color: #cc7059" custom-prefix="iconfont" type="icon-xiugaishoujihao" size="30"></uni-icons>
 
@@ -11,7 +12,7 @@
 					<span>></span>
 				</div>
 			</div>
-			<div class="conmt-top">
+			<div class="conmt-top" @click="gochangepassword">
 				<div class="conmt-box">
 					<uni-icons class="biao" style="color: #3dce6d" custom-prefix="iconfont" type="icon-xiugaimima" size="30"></uni-icons>
 					<p>修改密码</p>
@@ -43,7 +44,7 @@
 				</div>
 			</div>
 		</div>
-		<button>退出当前账号</button>
+		<button @click="gologin">退出当前账号</button>
 	</view>
 </template>
 
@@ -51,6 +52,27 @@
 export default {
 	data() {
 		return {};
+	},
+	methods: {
+		backIndex() {
+			const pages = getCurrentPages();
+			uni.navigateBack();
+		},
+		gochangephonenumber() {
+			uni.navigateTo({
+				url: '/pages/pagesmember/changephonenumber/changephonenumber'
+			});
+		},
+		gochangepassword() {
+			uni.navigateTo({
+				url: '/pages/pagesmember/changepassword/changepassword'
+			});
+		},
+		gologin() {
+			uni.navigateTo({
+				url: '/pages/pages/login/login'
+			});
+		}
 	}
 };
 </script>

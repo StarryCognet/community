@@ -173,7 +173,8 @@
 				{
 					"path": "member-settings/member-settings",
 					"style": {
-						"navigationBarTitleText": "会员设置"
+						"navigationBarTitleText": "会员设置",
+						"navigationStyle": "custom"
 					}
 				},
 				{
