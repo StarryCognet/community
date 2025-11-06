@@ -1,6 +1,6 @@
 <template>
 	<view class="page-container">
-		<uni-nav-bar :border="false" style="position: relative; z-index: 2" color="#fff" background-color="transparent" left-icon="left" title="智慧社区"></uni-nav-bar>
+		<uni-nav-bar :border="false" style="position: relative; z-index: 2" color="#fff" background-color="transparent" title="智慧社区"></uni-nav-bar>
 
 		<view class="content">
 			<view class="header">
