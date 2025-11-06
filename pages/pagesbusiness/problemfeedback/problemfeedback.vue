@@ -1,7 +1,6 @@
 <template>
 	<view>
 		<uni-nav-bar :border="false" left-icon="left" left-text="返回" @clickLeft="backIndex" title="问题反馈"></uni-nav-bar>
-
 		<view class="content">
 			<view class="item">
 				<p>类型</p>
