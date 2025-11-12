@@ -222,11 +222,11 @@ export default {
 		align-items: center;
 		justify-content: space-around;
 		.smallbox {
-			width: 90rpx;
+			width: 100rpx;
 			height: 111rpx;
 			.content {
-				width: 77rpx;
-				height: 77rpx;
+				width: 80rpx;
+				height: 80rpx;
 				background-color: #4f86ed;
 				border-radius: 20rpx;
 				margin: 0 auto;

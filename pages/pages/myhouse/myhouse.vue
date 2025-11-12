@@ -9,8 +9,10 @@
 				<div class="conmt-box">
 					<p>小区</p>
 					<div class="cont">
-						<span>请选择小区</span>
-						<uni-icons class="biao" style="color: #898989" custom-prefix="iconfont" type="icon-youjiantou" size="26rpx"></uni-icons>
+						<picker @change="bindPickerChange" :value="index" :range="buildingData" range-key="name">
+							<span>请选择小区</span>
+							<uni-icons class="biao" custom-prefix="iconfont" type="icon-youjiantou" style="font-size: 25rpx; margin-left: 10rpx" size="10"></uni-icons>
+						</picker>
 					</div>
 				</div>
 				<div class="conmt-box" @click="gomyhouse2">
@@ -23,8 +25,10 @@
 				<div class="conmt-box">
 					<p>住户类型</p>
 					<div class="cont">
-						<span>请选择住户类型</span>
-						<uni-icons class="biao" style="color: #898989" custom-prefix="iconfont" type="icon-youjiantou" size="26rpx"></uni-icons>
+						<picker @change="bindPickerChange" :value="index" :range="array">
+							<span>请选择住户类型</span>
+							<uni-icons class="biao" custom-prefix="iconfont" type="icon-youjiantou" style="font-size: 25rpx; margin-left: 10rpx" size="10"></uni-icons>
+						</picker>
 					</div>
 				</div>
 			</div>
@@ -53,9 +57,27 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			array: ['中国', '美国', '巴西', '日本'],
+			index: 0,
+			buildingData: []
+		};
+	},
+	onLoad() {
+		this.getbuilding();
 	},
 	methods: {
+		async getbuilding() {
+			let {
+				data: { list }
+			} = await building();
+			this.buildingData = list;
+			// console.log(this.buildingData);
+		},
+		bindPickerChange: function (e) {
+			console.log('picker发送选择改变，携带值为', e.detail.value);
+			this.index = e.detail.value;
+		},
 		backIndex() {
 			const pages = getCurrentPages();
 			uni.navigateBack();

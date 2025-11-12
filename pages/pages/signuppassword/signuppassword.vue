@@ -34,7 +34,7 @@
         </text>
       </label>
     </view>
-    <button>确定提交</button>
+    <button @click="jup">确定提交</button>
     <!-- <p>没有账号，立即注册</p> -->
   </view>
 </template>
@@ -43,6 +43,13 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    jup() {
+      uni.navigateTo({
+        url: "/pages/pages/myhouse6/myhouse6",
+      });
+    },
   },
 };
 </script>

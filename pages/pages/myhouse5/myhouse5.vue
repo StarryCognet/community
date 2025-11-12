@@ -7,8 +7,8 @@
       </div>
       <div class="box-zi">
         <p>恭喜你，操作成功!</p>
-        <p class="zi">李晓彬</p>
-        <p>你的门牌号是:1栋1单元102</p>
+        <p class="zi">{{ name }}</p>
+        <p>你的门牌号是:{{ selecthouse }}</p>
         <p>等待物业审核!</p>
       </div>
     </div>
@@ -17,9 +17,17 @@
 </template>
 
 <script>
+import store from "@/store/index.js"; //需要引入store
 export default {
   data() {
-    return {};
+    return {
+      name: null,
+      selecthouse: null,
+    };
+  },
+  onLoad() {
+    this.name = options.name;
+    this.selecthouse = store.state.selecthouse;
   },
   methods: {
     backIndex() {

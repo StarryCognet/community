@@ -428,9 +428,20 @@ var render = function () {
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
+                    {
+                      staticClass: _vm._$g(5, "sc"),
+                      attrs: { _i: 5 },
+                      on: {
+                        click: function ($event) {
+                          return _vm.$handleViewEvent($event)
+                        },
+                      },
+                    },
                     [
-                      _c("uni-icons", { attrs: { _i: 6 } }),
+                      _c("uni-icons", {
+                        staticStyle: { "font-size": "30rpx" },
+                        attrs: { _i: 6 },
+                      }),
                       _c("span", { attrs: { _i: 7 } }, [_vm._v("首尔甜城")]),
                     ],
                     1
@@ -441,6 +452,7 @@ var render = function () {
                     [
                       _c("uni-icons", {
                         staticClass: _vm._$g(9, "sc"),
+                        staticStyle: { "font-size": "30rpx" },
                         attrs: { _i: 9 },
                       }),
                       _c("v-uni-input", {
@@ -632,8 +644,14 @@ var render = function () {
                   ),
                   _c(
                     "p",
-                    { staticStyle: { width: "80rpx" }, attrs: { _i: 34 } },
-                    [_vm._v("更多"), _c("uni-icons", { attrs: { _i: 35 } })],
+                    { staticStyle: { width: "90rpx" }, attrs: { _i: 34 } },
+                    [
+                      _vm._v("更多"),
+                      _c("uni-icons", {
+                        staticStyle: { "font-size": "30rpx" },
+                        attrs: { _i: 35 },
+                      }),
+                    ],
                     1
                   ),
                 ],
@@ -2325,7 +2343,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! @/static/img/bg.png 
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, ".page-container[data-v-b671d22a] {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-color: #f6f6f6;\n  min-height: 100vh;\n}\n.page-container .content[data-v-b671d22a] {\n  padding: 0 24rpx;\n  margin-bottom: 40rpx;\n  margin-top: 10rpx;\n}\n.page-container .content .header .header-top[data-v-b671d22a] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 10rpx 0;\n}\n.page-container .content .header .header-top .top-dw[data-v-b671d22a] {\n  color: #fff;\n  display: flex;\n  align-items: center;\n  gap: 8rpx;\n}\n.page-container .content .header .header-top .top-dw span[data-v-b671d22a] {\n  font-size: 32rpx;\n  font-weight: 300;\n}\n.page-container .content .header .header-top .top-ss[data-v-b671d22a] {\n  position: relative;\n}\n.page-container .content .header .header-top .top-ss .search-icon[data-v-b671d22a] {\n  position: absolute;\n  left: 20rpx;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  color: #999;\n}\n.page-container .content .header .header-top .top-ss uni-input[data-v-b671d22a] {\n  border: 0;\n  padding: 14rpx 0;\n  border-radius: 200rpx;\n  width: 260rpx;\n  font-size: 26rpx;\n  padding-left: 60rpx;\n  background-color: rgba(255, 255, 255, 0.9);\n}\n.page-container .content .header .header-mian[data-v-b671d22a] {\n  background-color: #fff;\n  border-radius: 24rpx;\n  padding: 40rpx 0;\n  margin-top: 30rpx;\n  display: flex;\n  justify-content: space-around;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(1) .item-img[data-v-b671d22a] {\n  background-color: #4f86ed;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(2) .item-img[data-v-b671d22a] {\n  background-color: #71b78b;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(3) .item-img[data-v-b671d22a] {\n  background-color: #e39e5e;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(4) .item-img[data-v-b671d22a] {\n  background-color: #479cf7;\n}\n.page-container .content .header .header-mian .mian-item[data-v-b671d22a] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 14rpx;\n}\n.page-container .content .header .header-mian .mian-item .item-img[data-v-b671d22a] {\n  width: 100rpx;\n  height: 100rpx;\n  border-radius: 16rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.page-container .content .header .header-mian .mian-item .item-img uni-image[data-v-b671d22a] {\n  width: 60rpx;\n}\n.page-container .content .header .header-mian .mian-item p[data-v-b671d22a] {\n  font-size: 28rpx;\n  color: #6b6b6b;\n}\n.page-container .content-bot[data-v-b671d22a] {\n  padding: 24rpx;\n  padding-bottom: 200rpx;\n  background-color: #fff;\n  border-top-left-radius: 30rpx;\n  border-top-right-radius: 30rpx;\n  margin-top: 20rpx;\n}\n.page-container .content-bot .con .con-top[data-v-b671d22a] {\n  width: 100%;\n  padding: 16rpx 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.page-container .content-bot .con .con-top uni-image[data-v-b671d22a] {\n  width: 100rpx;\n  height: 40rpx;\n}\n.page-container .content-bot .con .con-top p[data-v-b671d22a] {\n  width: 320rpx;\n}\n.page-container .content-bot .con .con-top p span[data-v-b671d22a] {\n  background-color: red;\n  display: inline-block;\n  padding: 8rpx;\n  border-radius: 50rpx;\n  position: relative;\n  left: 10rpx;\n  bottom: -2rpx;\n  width: 8rpx;\n  height: 8rpx;\n}\n.page-container .content-bot .con uni-image[data-v-b671d22a] {\n  width: 100%;\n  border-radius: 16rpx;\n}\n.page-container .content-bot .lift h2[data-v-b671d22a] {\n  font-size: 34rpx;\n  font-weight: 400;\n  padding: 16rpx 0;\n  padding-bottom: 24rpx;\n}\n.page-container .content-bot .lift uni-image[data-v-b671d22a] {\n  width: 100%;\n  border-radius: 16rpx;\n}\n.page-container .content-bot .zx h2[data-v-b671d22a] {\n  padding: 16rpx 0;\n  font-size: 34rpx;\n  font-weight: 400;\n  display: flex;\n  align-items: center;\n  gap: 8rpx;\n}\n.page-container .content-bot .zx .zx-items[data-v-b671d22a] {\n  gap: 20rpx;\n  display: flex;\n  flex-direction: column;\n}\n.page-container .content-bot .zx .zx-items .item[data-v-b671d22a] {\n  padding: 20rpx 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid #f5f5f5;\n}\n.page-container .content-bot .zx .zx-items .item[data-v-b671d22a]:last-child {\n  border-bottom: none;\n}\n.page-container .content-bot .zx .zx-items .item .item-title[data-v-b671d22a] {\n  height: 150rpx;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.page-container .content-bot .zx .zx-items .item .item-title h2[data-v-b671d22a] {\n  padding: 0;\n  font-size: 30rpx;\n  font-weight: 400;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.page-container .content-bot .zx .zx-items .item .item-title p[data-v-b671d22a] {\n  font-size: 24rpx;\n  color: #999;\n  font-weight: 300;\n}\n.page-container .content-bot .zx .zx-items .item uni-image[data-v-b671d22a] {\n  width: 300rpx;\n  height: 250rpx;\n  border-radius: 10rpx;\n}\n.page-container .tap[data-v-b671d22a] {\n  border-top: 1px solid #dddddd;\n  position: fixed;\n  bottom: 0;\n  background-color: #fff;\n  width: 100%;\n  display: flex;\n  justify-content: space-around;\n  padding: 16rpx 0;\n}\n.page-container .tap .tap-item:nth-child(1) p[data-v-b671d22a] {\n  color: #0387ff;\n}\n.page-container .tap .tap-item[data-v-b671d22a] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 6rpx;\n}\n.page-container .tap .tap-item uni-image[data-v-b671d22a] {\n  width: 44rpx;\n}\n.page-container .tap .tap-item p[data-v-b671d22a] {\n  font-size: 24rpx;\n}\n", ""]);
+exports.push([module.i, ".page-container[data-v-b671d22a] {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-color: #f6f6f6;\n  min-height: 100vh;\n}\n.page-container .content[data-v-b671d22a] {\n  padding: 0 24rpx;\n  margin-bottom: 40rpx;\n  margin-top: 10rpx;\n}\n.page-container .content .header .header-top[data-v-b671d22a] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 10rpx 0;\n}\n.page-container .content .header .header-top .top-dw[data-v-b671d22a] {\n  color: #fff;\n  display: flex;\n  align-items: center;\n  gap: 8rpx;\n}\n.page-container .content .header .header-top .top-dw span[data-v-b671d22a] {\n  font-size: 32rpx;\n  font-weight: 300;\n}\n.page-container .content .header .header-top .top-ss[data-v-b671d22a] {\n  position: relative;\n}\n.page-container .content .header .header-top .top-ss .search-icon[data-v-b671d22a] {\n  position: absolute;\n  left: 20rpx;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n  color: #999;\n}\n.page-container .content .header .header-top .top-ss uni-input[data-v-b671d22a] {\n  border: 0;\n  padding: 14rpx 0;\n  border-radius: 200rpx;\n  width: 260rpx;\n  font-size: 26rpx;\n  padding-left: 60rpx;\n  background-color: rgba(255, 255, 255, 0.9);\n}\n.page-container .content .header .header-mian[data-v-b671d22a] {\n  background-color: #fff;\n  border-radius: 24rpx;\n  padding: 40rpx 0;\n  margin-top: 30rpx;\n  display: flex;\n  justify-content: space-around;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(1) .item-img[data-v-b671d22a] {\n  background-color: #4f86ed;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(2) .item-img[data-v-b671d22a] {\n  background-color: #71b78b;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(3) .item-img[data-v-b671d22a] {\n  background-color: #e39e5e;\n}\n.page-container .content .header .header-mian .mian-item:nth-child(4) .item-img[data-v-b671d22a] {\n  background-color: #479cf7;\n}\n.page-container .content .header .header-mian .mian-item[data-v-b671d22a] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 14rpx;\n}\n.page-container .content .header .header-mian .mian-item .item-img[data-v-b671d22a] {\n  width: 100rpx;\n  height: 100rpx;\n  border-radius: 16rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.page-container .content .header .header-mian .mian-item .item-img uni-image[data-v-b671d22a] {\n  width: 60rpx;\n}\n.page-container .content .header .header-mian .mian-item p[data-v-b671d22a] {\n  font-size: 28rpx;\n  color: #6b6b6b;\n}\n.page-container .content-bot[data-v-b671d22a] {\n  padding: 24rpx;\n  padding-bottom: 200rpx;\n  background-color: #fff;\n  border-top-left-radius: 30rpx;\n  border-top-right-radius: 30rpx;\n  margin-top: 20rpx;\n}\n.page-container .content-bot .con .con-top[data-v-b671d22a] {\n  width: 100%;\n  padding: 16rpx 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.page-container .content-bot .con .con-top uni-image[data-v-b671d22a] {\n  width: 100rpx;\n  height: 40rpx;\n}\n.page-container .content-bot .con .con-top p[data-v-b671d22a] {\n  width: 330rpx;\n}\n.page-container .content-bot .con .con-top p span[data-v-b671d22a] {\n  background-color: red;\n  display: inline-block;\n  padding: 8rpx;\n  border-radius: 50rpx;\n  position: relative;\n  left: 10rpx;\n  bottom: -2rpx;\n  width: 8rpx;\n  height: 8rpx;\n}\n.page-container .content-bot .con uni-image[data-v-b671d22a] {\n  width: 100%;\n  border-radius: 16rpx;\n}\n.page-container .content-bot .lift h2[data-v-b671d22a] {\n  font-size: 34rpx;\n  font-weight: 400;\n  padding: 16rpx 0;\n  padding-bottom: 24rpx;\n}\n.page-container .content-bot .lift uni-image[data-v-b671d22a] {\n  width: 100%;\n  border-radius: 16rpx;\n}\n.page-container .content-bot .zx h2[data-v-b671d22a] {\n  padding: 16rpx 0;\n  font-size: 34rpx;\n  font-weight: 400;\n  display: flex;\n  align-items: center;\n  gap: 8rpx;\n}\n.page-container .content-bot .zx .zx-items[data-v-b671d22a] {\n  gap: 20rpx;\n  display: flex;\n  flex-direction: column;\n}\n.page-container .content-bot .zx .zx-items .item[data-v-b671d22a] {\n  padding: 20rpx 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  border-bottom: 1px solid #f5f5f5;\n}\n.page-container .content-bot .zx .zx-items .item[data-v-b671d22a]:last-child {\n  border-bottom: none;\n}\n.page-container .content-bot .zx .zx-items .item .item-title[data-v-b671d22a] {\n  height: 150rpx;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.page-container .content-bot .zx .zx-items .item .item-title h2[data-v-b671d22a] {\n  padding: 0;\n  font-size: 30rpx;\n  font-weight: 400;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n.page-container .content-bot .zx .zx-items .item .item-title p[data-v-b671d22a] {\n  font-size: 24rpx;\n  color: #999;\n  font-weight: 300;\n}\n.page-container .content-bot .zx .zx-items .item uni-image[data-v-b671d22a] {\n  width: 300rpx;\n  height: 250rpx;\n  border-radius: 10rpx;\n}\n.page-container .tap[data-v-b671d22a] {\n  border-top: 1px solid #dddddd;\n  position: fixed;\n  bottom: 0;\n  background-color: #fff;\n  width: 100%;\n  display: flex;\n  justify-content: space-around;\n  padding: 16rpx 0;\n}\n.page-container .tap .tap-item:nth-child(1) p[data-v-b671d22a] {\n  color: #0387ff;\n}\n.page-container .tap .tap-item[data-v-b671d22a] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 6rpx;\n}\n.page-container .tap .tap-item uni-image[data-v-b671d22a] {\n  width: 44rpx;\n}\n.page-container .tap .tap-item p[data-v-b671d22a] {\n  font-size: 24rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -3836,7 +3854,15 @@ var render = function () {
               ),
               _c(
                 "div",
-                { staticClass: _vm._$g(11, "sc"), attrs: { _i: 11 } },
+                {
+                  staticClass: _vm._$g(11, "sc"),
+                  attrs: { _i: 11 },
+                  on: {
+                    click: function ($event) {
+                      return _vm.$handleViewEvent($event)
+                    },
+                  },
+                },
                 [
                   _c("p", { attrs: { _i: 12 } }, [_vm._v("楼栋房号")]),
                   _c(
@@ -4434,7 +4460,14 @@ var render = function () {
     "uni-view",
     { attrs: { _i: 0 } },
     [
-      _c("uni-nav-bar", { attrs: { _i: 1 } }),
+      _c("uni-nav-bar", {
+        attrs: { _i: 1 },
+        on: {
+          clickLeft: function ($event) {
+            return _vm.$handleViewEvent($event)
+          },
+        },
+      }),
       _c(
         "div",
         { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
@@ -5256,20 +5289,23 @@ var render = function () {
                     [
                       _c("uni-view", {
                         staticClass: _vm._$g(36, "sc"),
+                        staticStyle: {
+                          "font-size": "35rpx",
+                          "font-weight": "800",
+                        },
                         attrs: { _i: 36 },
                       }),
-                      _c("v-uni-text", { attrs: { _i: 37 } }),
                       _c(
                         "uni-view",
-                        { staticClass: _vm._$g(38, "sc"), attrs: { _i: 38 } },
+                        { staticClass: _vm._$g(37, "sc"), attrs: { _i: 37 } },
                         [_vm._v("报修记录")]
                       ),
                     ],
                     1
                   ),
                   _c("uni-view", {
-                    staticClass: _vm._$g(39, "sc"),
-                    attrs: { _i: 39 },
+                    staticClass: _vm._$g(38, "sc"),
+                    attrs: { _i: 38 },
                   }),
                 ],
                 1
@@ -5277,8 +5313,8 @@ var render = function () {
               _c(
                 "uni-view",
                 {
-                  staticClass: _vm._$g(40, "sc"),
-                  attrs: { _i: 40 },
+                  staticClass: _vm._$g(39, "sc"),
+                  attrs: { _i: 39 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5288,23 +5324,24 @@ var render = function () {
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(41, "sc"), attrs: { _i: 41 } },
+                    { staticClass: _vm._$g(40, "sc"), attrs: { _i: 40 } },
                     [
                       _c("uni-view", {
-                        staticClass: _vm._$g(42, "sc"),
-                        attrs: { _i: 42 },
+                        staticClass: _vm._$g(41, "sc"),
+                        staticStyle: { "font-size": "30rpx" },
+                        attrs: { _i: 41 },
                       }),
                       _c(
                         "uni-view",
-                        { staticClass: _vm._$g(43, "sc"), attrs: { _i: 43 } },
+                        { staticClass: _vm._$g(42, "sc"), attrs: { _i: 42 } },
                         [_vm._v("反馈记录")]
                       ),
                     ],
                     1
                   ),
                   _c("uni-view", {
-                    staticClass: _vm._$g(44, "sc"),
-                    attrs: { _i: 44 },
+                    staticClass: _vm._$g(43, "sc"),
+                    attrs: { _i: 43 },
                   }),
                 ],
                 1
@@ -5312,8 +5349,8 @@ var render = function () {
               _c(
                 "uni-view",
                 {
-                  staticClass: _vm._$g(45, "sc"),
-                  attrs: { _i: 45 },
+                  staticClass: _vm._$g(44, "sc"),
+                  attrs: { _i: 44 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5323,23 +5360,27 @@ var render = function () {
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(46, "sc"), attrs: { _i: 46 } },
+                    { staticClass: _vm._$g(45, "sc"), attrs: { _i: 45 } },
                     [
                       _c("uni-view", {
-                        staticClass: _vm._$g(47, "sc"),
-                        attrs: { _i: 47 },
+                        staticClass: _vm._$g(46, "sc"),
+                        staticStyle: {
+                          "font-size": "35rpx",
+                          "font-weight": "800",
+                        },
+                        attrs: { _i: 46 },
                       }),
                       _c(
                         "uni-view",
-                        { staticClass: _vm._$g(48, "sc"), attrs: { _i: 48 } },
+                        { staticClass: _vm._$g(47, "sc"), attrs: { _i: 47 } },
                         [_vm._v("联系物业")]
                       ),
                     ],
                     1
                   ),
                   _c("uni-view", {
-                    staticClass: _vm._$g(49, "sc"),
-                    attrs: { _i: 49 },
+                    staticClass: _vm._$g(48, "sc"),
+                    attrs: { _i: 48 },
                   }),
                 ],
                 1
@@ -5347,8 +5388,8 @@ var render = function () {
               _c(
                 "uni-view",
                 {
-                  staticClass: _vm._$g(50, "sc"),
-                  attrs: { _i: 50 },
+                  staticClass: _vm._$g(49, "sc"),
+                  attrs: { _i: 49 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5358,23 +5399,24 @@ var render = function () {
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(51, "sc"), attrs: { _i: 51 } },
+                    { staticClass: _vm._$g(50, "sc"), attrs: { _i: 50 } },
                     [
                       _c("uni-view", {
-                        staticClass: _vm._$g(52, "sc"),
-                        attrs: { _i: 52 },
+                        staticClass: _vm._$g(51, "sc"),
+                        staticStyle: { "font-size": "30rpx" },
+                        attrs: { _i: 51 },
                       }),
                       _c(
                         "uni-view",
-                        { staticClass: _vm._$g(53, "sc"), attrs: { _i: 53 } },
+                        { staticClass: _vm._$g(52, "sc"), attrs: { _i: 52 } },
                         [_vm._v("账号设置")]
                       ),
                     ],
                     1
                   ),
                   _c("uni-view", {
-                    staticClass: _vm._$g(54, "sc"),
-                    attrs: { _i: 54 },
+                    staticClass: _vm._$g(53, "sc"),
+                    attrs: { _i: 53 },
                   }),
                 ],
                 1
@@ -5486,7 +5528,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! @/static/img/vip-bg.
 exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-exports.push([module.i, ".box[data-v-1b33a8eb] {\n  background-color: #f6f6f6;\n}\n.box .img_box[data-v-1b33a8eb] {\n  height: 405rpx;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat;\n  background-size: 100% 405rpx;\n  padding: 0 46rpx;\n  background-color: #fff;\n}\n.box .img_box .title[data-v-1b33a8eb] {\n  width: 100%;\n  height: 46rpx;\n  display: flex;\n  justify-content: space-between;\n  padding-top: 111rpx;\n  padding-bottom: 58rpx;\n  color: #fff;\n}\n.box .img_box .title .left[data-v-1b33a8eb] {\n  width: 120rpx;\n  text-align: left;\n}\n.box .img_box .title .right[data-v-1b33a8eb] {\n  width: 120rpx;\n  text-align: right;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.box .img_box .title .right .icon-shezhi[data-v-1b33a8eb] {\n  font-size: 42rpx;\n}\n.box .img_box .title .conter[data-v-1b33a8eb] {\n  width: 100%rpx;\n  text-align: center;\n  font-size: 34rpx;\n}\n.box .img_box .account[data-v-1b33a8eb] {\n  width: 100%;\n  height: 114rpx;\n  display: flex;\n  align-items: center;\n}\n.box .img_box .account .touxiang[data-v-1b33a8eb] {\n  width: 114rpx;\n  height: 114rpx;\n  border-radius: 50%;\n  background-color: aqua;\n  margin-right: 40rpx;\n}\n.box .img_box .account .touxiang uni-image[data-v-1b33a8eb] {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  margin-right: 47rpx;\n}\n.box .img_box .account .acc[data-v-1b33a8eb] {\n  width: 300rpx;\n  height: 82rpx;\n}\n.box .img_box .account .acc .text[data-v-1b33a8eb] {\n  font-size: 24rpx;\n  color: #fff;\n}\n.box .img_box .account .acc .rencheng[data-v-1b33a8eb] {\n  width: 96rpx;\n  height: 36rpx;\n  border: 1rpx solid #fff;\n  border-radius: 30rpx;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 20rpx;\n  color: #fff;\n}\n.box .img_box .account .acc .rencheng .icon-shimingrenzheng[data-v-1b33a8eb] {\n  font-size: 25rpx;\n}\n.box .img_box .account .acc .rencheng .span[data-v-1b33a8eb] {\n  font-size: 17rpx;\n}\n.box .content_box[data-v-1b33a8eb] {\n  width: 100%;\n  height: 258rpx;\n  background-color: #fff;\n  padding: 0 30rpx;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n}\n.box .content_box .smallbox[data-v-1b33a8eb] {\n  width: 90rpx;\n  height: 111rpx;\n}\n.box .content_box .smallbox .content[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #4f86ed;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .content_bx[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #71b78b;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content_bx uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .content_fk[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #e39e5e;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content_fk uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .content_bz[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #479cf7;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content_bz uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .text[data-v-1b33a8eb] {\n  font-size: 20rpx;\n  text-align: center;\n  margin-top: 4rpx;\n}\n.box .bottom_box[data-v-1b33a8eb] {\n  width: 100%;\n}\n.box .bottom_box .bottom[data-v-1b33a8eb] {\n  width: 100%;\n  background-color: #fff;\n  margin-top: 20rpx;\n  padding-left: 30rpx;\n  padding-top: 32rpx;\n  box-sizing: border-box;\n}\n.box .bottom_box .bottom .setting_box[data-v-1b33a8eb] {\n  width: 100%;\n  height: 88rpx;\n  border-bottom: 1px solid #eeeeee;\n  padding-right: 32rpx;\n  padding-left: 10rpx;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin-bottom: 8rpx;\n  color: #7a7a7a;\n}\n.box .bottom_box .bottom .setting_box .setting[data-v-1b33a8eb] {\n  display: flex;\n}\n.box .bottom_box .bottom .setting_box .setting uni-image[data-v-1b33a8eb] {\n  width: 34rpx;\n  height: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-wuyebaoxiu[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-yijianfankui[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-xinxi[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-shezhi[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .text[data-v-1b33a8eb] {\n  font-size: 24rpx;\n}\n", ""]);
+exports.push([module.i, ".box[data-v-1b33a8eb] {\n  background-color: #f6f6f6;\n}\n.box .img_box[data-v-1b33a8eb] {\n  height: 405rpx;\n  background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat;\n  background-size: 100% 405rpx;\n  padding: 0 46rpx;\n  background-color: #fff;\n}\n.box .img_box .title[data-v-1b33a8eb] {\n  width: 100%;\n  height: 46rpx;\n  display: flex;\n  justify-content: space-between;\n  padding-top: 111rpx;\n  padding-bottom: 58rpx;\n  color: #fff;\n}\n.box .img_box .title .left[data-v-1b33a8eb] {\n  width: 120rpx;\n  text-align: left;\n}\n.box .img_box .title .right[data-v-1b33a8eb] {\n  width: 120rpx;\n  text-align: right;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.box .img_box .title .right .icon-shezhi[data-v-1b33a8eb] {\n  font-size: 42rpx;\n}\n.box .img_box .title .conter[data-v-1b33a8eb] {\n  width: 100%rpx;\n  text-align: center;\n  font-size: 34rpx;\n}\n.box .img_box .account[data-v-1b33a8eb] {\n  width: 100%;\n  height: 114rpx;\n  display: flex;\n  align-items: center;\n}\n.box .img_box .account .touxiang[data-v-1b33a8eb] {\n  width: 114rpx;\n  height: 114rpx;\n  border-radius: 50%;\n  background-color: aqua;\n  margin-right: 40rpx;\n}\n.box .img_box .account .touxiang uni-image[data-v-1b33a8eb] {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n  margin-right: 47rpx;\n}\n.box .img_box .account .acc[data-v-1b33a8eb] {\n  width: 300rpx;\n  height: 82rpx;\n}\n.box .img_box .account .acc .text[data-v-1b33a8eb] {\n  font-size: 24rpx;\n  color: #fff;\n}\n.box .img_box .account .acc .rencheng[data-v-1b33a8eb] {\n  width: 96rpx;\n  height: 36rpx;\n  border: 1rpx solid #fff;\n  border-radius: 30rpx;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 20rpx;\n  color: #fff;\n}\n.box .img_box .account .acc .rencheng .icon-shimingrenzheng[data-v-1b33a8eb] {\n  font-size: 25rpx;\n}\n.box .img_box .account .acc .rencheng .span[data-v-1b33a8eb] {\n  font-size: 17rpx;\n}\n.box .content_box[data-v-1b33a8eb] {\n  width: 100%;\n  height: 258rpx;\n  background-color: #fff;\n  padding: 0 30rpx;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n}\n.box .content_box .smallbox[data-v-1b33a8eb] {\n  width: 90rpx;\n  height: 111rpx;\n}\n.box .content_box .smallbox .content[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #4f86ed;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .content_bx[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #71b78b;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content_bx uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .content_fk[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #e39e5e;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content_fk uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .content_bz[data-v-1b33a8eb] {\n  width: 77rpx;\n  height: 77rpx;\n  background-color: #479cf7;\n  border-radius: 20rpx;\n  margin: 0 auto;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.box .content_box .smallbox .content_bz uni-image[data-v-1b33a8eb] {\n  width: 52rpx;\n  height: 52rpx;\n}\n.box .content_box .smallbox .text[data-v-1b33a8eb] {\n  font-size: 20rpx;\n  text-align: center;\n  margin-top: 4rpx;\n}\n.box .bottom_box[data-v-1b33a8eb] {\n  width: 100%;\n}\n.box .bottom_box .bottom[data-v-1b33a8eb] {\n  width: 100%;\n  background-color: #fff;\n  margin-top: 20rpx;\n  padding-left: 30rpx;\n  padding-top: 32rpx;\n  box-sizing: border-box;\n}\n.box .bottom_box .bottom .setting_box[data-v-1b33a8eb] {\n  width: 100%;\n  height: 88rpx;\n  border-bottom: 1px solid #eeeeee;\n  padding-right: 32rpx;\n  padding-left: 10rpx;\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin-bottom: 8rpx;\n  color: #7a7a7a;\n}\n.box .bottom_box .bottom .setting_box .setting[data-v-1b33a8eb] {\n  display: flex;\n  align-items: center;\n}\n.box .bottom_box .bottom .setting_box .setting uni-image[data-v-1b33a8eb] {\n  width: 34rpx;\n  height: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-wuyebaoxiu[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-yijianfankui[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-xinxi[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .icon-shezhi[data-v-1b33a8eb] {\n  font-size: 34rpx;\n  margin-right: 16rpx;\n}\n.box .bottom_box .bottom .setting_box .setting .text[data-v-1b33a8eb] {\n  font-size: 24rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -6568,7 +6610,9 @@ var render = function () {
                 "div",
                 { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
                 [
-                  _c("span", { attrs: { _i: 5 } }, [_vm._v("搜索关键字")]),
+                  _c("v-uni-input", {
+                    attrs: { type: "text", placeholder: "搜索关键字", _i: 5 },
+                  }),
                   _c("uni-icons", {
                     staticClass: _vm._$g(6, "sc"),
                     attrs: { _i: 6 },
@@ -6580,7 +6624,9 @@ var render = function () {
                 "div",
                 { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } },
                 [
-                  _c("span", { attrs: { _i: 8 } }, [_vm._v("筛选")]),
+                  _c("v-uni-input", {
+                    attrs: { type: "text", placeholder: "搜索关键字", _i: 8 },
+                  }),
                   _c("uni-icons", {
                     staticClass: _vm._$g(9, "sc"),
                     attrs: { _i: 9 },
@@ -6937,7 +6983,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #f1f5f8;\n}\n.conmt .head {\n  background-color: #fff;\n  padding: 20rpx 0;\n  display: flex;\n  justify-content: space-around;\n}\n.conmt .head .head-left {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 435rpx;\n  height: 90rpx;\n  background-color: #f4f6f6;\n  border-radius: 50rpx;\n}\n.conmt .head .head-left span {\n  margin-left: 20rpx;\n}\n.conmt .head .head-left .biao {\n  margin-right: 20rpx;\n}\n.conmt .head .head-reight {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 230rpx;\n  height: 90rpx;\n  background-color: #f4f6f6;\n  border-radius: 50rpx;\n}\n.conmt .head .head-reight span {\n  margin-left: 20rpx;\n}\n.conmt .head .head-reight .biao {\n  margin-right: 20rpx;\n}\n.conmt .conent {\n  margin: 30rpx 20rpx;\n  background-color: #fff;\n}\n.conmt .conent .conent-box {\n  display: flex;\n  padding: 25rpx;\n}\n.conmt .conent .conent-box uni-image {\n  width: 185rpx;\n  height: 185rpx;\n  border-radius: 7rpx;\n}\n.conmt .conent .conent-box .con-zi {\n  margin-left: 20rpx;\n}\n.conmt .conent .conent-box .con-zi h2 {\n  font-size: 34rpx;\n}\n.conmt .conent .conent-box .con-zi p {\n  margin-top: 20rpx;\n  color: #a7a7a7;\n}\n.conmt .conent .conent-box .con-zi div {\n  margin-top: 20rpx;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: #5eadf0;\n  border-radius: 10rpx;\n  color: #fff;\n  padding: 5rpx;\n  height: 40rpx;\n  width: 125rpx;\n  font-size: 23rpx;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #f1f5f8;\n}\n.conmt .head {\n  background-color: #fff;\n  padding: 20rpx 0;\n  display: flex;\n  justify-content: space-around;\n}\n.conmt .head .head-left {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 415rpx;\n  height: 90rpx;\n  background-color: #f4f6f6;\n  border-radius: 50rpx;\n  padding: 0 20rpx;\n}\n.conmt .head .head-left span {\n  margin-left: 20rpx;\n}\n.conmt .head .head-left .biao {\n  margin-right: 20rpx;\n}\n.conmt .head .head-reight {\n  display: flex;\n  padding: 0 20rpx;\n  justify-content: space-between;\n  align-items: center;\n  width: 210rpx;\n  height: 90rpx;\n  background-color: #f4f6f6;\n  border-radius: 50rpx;\n}\n.conmt .head .head-reight span {\n  margin-left: 20rpx;\n}\n.conmt .head .head-reight .biao {\n  margin-right: 20rpx;\n}\n.conmt .conent {\n  margin: 30rpx 20rpx;\n  background-color: #fff;\n}\n.conmt .conent .conent-box {\n  display: flex;\n  padding: 25rpx;\n}\n.conmt .conent .conent-box uni-image {\n  width: 185rpx;\n  height: 185rpx;\n  border-radius: 7rpx;\n}\n.conmt .conent .conent-box .con-zi {\n  margin-left: 20rpx;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.conmt .conent .conent-box .con-zi h2 {\n  font-size: 34rpx;\n  font-weight: 500;\n}\n.conmt .conent .conent-box .con-zi p {\n  margin-top: 20rpx;\n  color: #a7a7a7;\n}\n.conmt .conent .conent-box .con-zi div {\n  margin-top: 20rpx;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: #5eadf0;\n  border-radius: 10rpx;\n  color: #fff;\n  padding: 5rpx;\n  height: 40rpx;\n  width: 125rpx;\n  font-size: 23rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -9060,11 +9106,11 @@ var render = function () {
         },
       }),
       _c(
-        "div",
+        "uni-view",
         { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
         [
           _c(
-            "div",
+            "uni-view",
             {
               staticClass: _vm._$g(3, "sc"),
               attrs: { _i: 3 },
@@ -9076,12 +9122,12 @@ var render = function () {
             },
             [
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(5, "sc"),
-                    staticStyle: { color: "#cc7059" },
+                    staticStyle: { "font-size": "38rpx", color: "#cc7059" },
                     attrs: { _i: 5 },
                   }),
                   _c("p", { attrs: { _i: 6 } }, [_vm._v("修改手机号")]),
@@ -9089,7 +9135,7 @@ var render = function () {
                 1
               ),
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } },
                 [_c("uni-icons", { attrs: { _i: 8 } })],
                 1
@@ -9098,7 +9144,7 @@ var render = function () {
             1
           ),
           _c(
-            "div",
+            "uni-view",
             {
               staticClass: _vm._$g(9, "sc"),
               attrs: { _i: 9 },
@@ -9110,12 +9156,12 @@ var render = function () {
             },
             [
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(11, "sc"),
-                    staticStyle: { color: "#3dce6d" },
+                    staticStyle: { "font-size": "38rpx", color: "#3dce6d" },
                     attrs: { _i: 11 },
                   }),
                   _c("p", { attrs: { _i: 12 } }, [_vm._v("修改密码")]),
@@ -9123,7 +9169,7 @@ var render = function () {
                 1
               ),
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
                 [_c("uni-icons", { attrs: { _i: 14 } })],
                 1
@@ -9135,20 +9181,20 @@ var render = function () {
         1
       ),
       _c(
-        "div",
+        "uni-view",
         { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
         [
           _c(
-            "div",
+            "uni-view",
             { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
             [
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(18, "sc"),
-                    staticStyle: { color: "#359bec" },
+                    staticStyle: { "font-size": "38rpx", color: "#359bec" },
                     attrs: { _i: 18 },
                   }),
                   _c("p", { attrs: { _i: 19 } }, [_vm._v("清除缓存")]),
@@ -9156,7 +9202,7 @@ var render = function () {
                 1
               ),
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(20, "sc"), attrs: { _i: 20 } },
                 [
                   _c("p", { attrs: { _i: 21 } }, [_vm._v("12M")]),
@@ -9168,16 +9214,16 @@ var render = function () {
             1
           ),
           _c(
-            "div",
+            "uni-view",
             { staticClass: _vm._$g(23, "sc"), attrs: { _i: 23 } },
             [
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(24, "sc"), attrs: { _i: 24 } },
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(25, "sc"),
-                    staticStyle: { color: "#75dc98" },
+                    staticStyle: { "font-size": "38rpx", color: "#75dc98" },
                     attrs: { _i: 25 },
                   }),
                   _c("p", { attrs: { _i: 26 } }, [_vm._v("当前版本")]),
@@ -9185,7 +9231,7 @@ var render = function () {
                 1
               ),
               _c(
-                "div",
+                "uni-view",
                 { staticClass: _vm._$g(27, "sc"), attrs: { _i: 27 } },
                 [
                   _c("p", { attrs: { _i: 28 } }, [_vm._v("1.0.0")]),
@@ -10073,7 +10119,17 @@ var render = function () {
     "uni-view",
     { attrs: { _i: 0 } },
     [
-      _c("uni-nav-bar", { attrs: { _i: 1 } }),
+      _c("uni-nav-bar", {
+        attrs: { _i: 1 },
+        on: {
+          clickLeft: function ($event) {
+            return _vm.$handleViewEvent($event)
+          },
+          clickRight: function ($event) {
+            return _vm.$handleViewEvent($event)
+          },
+        },
+      }),
       _c(
         "div",
         { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
@@ -11716,7 +11772,14 @@ var render = function () {
     "uni-view",
     { attrs: { _i: 0 } },
     [
-      _c("uni-nav-bar", { attrs: { _i: 1 } }),
+      _c("uni-nav-bar", {
+        attrs: { _i: 1 },
+        on: {
+          clickLeft: function ($event) {
+            return _vm.$handleViewEvent($event)
+          },
+        },
+      }),
       _c(
         "div",
         { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } },
@@ -12029,10 +12092,16 @@ var render = function () {
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(5, "sc"),
-                    staticStyle: { color: "#cc7059" },
+                    staticStyle: { "font-size": "38rpx", color: "#cc7059" },
                     attrs: { _i: 5 },
                   }),
-                  _c("p", { attrs: { _i: 6 } }, [_vm._v("输入旧密码")]),
+                  _c("v-uni-input", {
+                    attrs: {
+                      type: "password",
+                      placeholder: "输入旧密码",
+                      _i: 6,
+                    },
+                  }),
                 ],
                 1
               ),
@@ -12049,12 +12118,16 @@ var render = function () {
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(9, "sc"),
-                    staticStyle: { color: "#3dce6d" },
+                    staticStyle: { "font-size": "38rpx", color: "#3dce6d" },
                     attrs: { _i: 9 },
                   }),
-                  _c("p", { attrs: { _i: 10 } }, [
-                    _vm._v("输入6-12位的新密码"),
-                  ]),
+                  _c("v-uni-input", {
+                    attrs: {
+                      type: "password",
+                      placeholder: "输入6-12位的新密码",
+                      _i: 10,
+                    },
+                  }),
                 ],
                 1
               ),
@@ -12071,10 +12144,16 @@ var render = function () {
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(13, "sc"),
-                    staticStyle: { color: "#3dce6d" },
+                    staticStyle: { "font-size": "38rpx", color: "#3dce6d" },
                     attrs: { _i: 13 },
                   }),
-                  _c("p", { attrs: { _i: 14 } }, [_vm._v("再次输入新密码")]),
+                  _c("v-uni-input", {
+                    attrs: {
+                      type: "password",
+                      placeholder: "再次输入新密码",
+                      _i: 14,
+                    },
+                  }),
                 ],
                 1
               ),
@@ -12194,7 +12273,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #f6f5f5;\n}\n.conmt .conmt-top {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: 170rpx;\n  background-color: #fff;\n  border-bottom: 1px solid #e9e9e9;\n}\n.conmt .conmt-top .box {\n  display: flex;\n}\n.conmt .conmt-top .box span {\n  margin-right: 30rpx;\n  font-size: 30rpx;\n}\n.conmt .conmt-top .conmt-box {\n  display: flex;\n  align-items: center;\n}\n.conmt .conmt-top .conmt-box p {\n  margin-left: 10rpx;\n  font-size: 30rpx;\n}\n.conmt .conmt-top .conmt-box .biao {\n  margin-left: 30rpx;\n  font-size: 40rpx;\n}\nuni-button {\n  width: 512rpx;\n  height: 80rpx;\n  background-color: #1f8fff;\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50rpx;\n  margin-top: 150rpx;\n  font-size: 31rpx;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #f6f5f5;\n}\n.conmt .conmt-top {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  height: 170rpx;\n  background-color: #fff;\n  border-bottom: 1px solid #e9e9e9;\n}\n.conmt .conmt-top .box {\n  display: flex;\n}\n.conmt .conmt-top .box span {\n  margin-right: 30rpx;\n  font-size: 30rpx;\n}\n.conmt .conmt-top .conmt-box {\n  display: flex;\n  align-items: center;\n}\n.conmt .conmt-top .conmt-box uni-input {\n  margin-left: 10rpx;\n  font-size: 30rpx;\n}\n.conmt .conmt-top .conmt-box .biao {\n  margin-left: 30rpx;\n  font-size: 40rpx;\n}\nuni-button {\n  width: 512rpx;\n  height: 80rpx;\n  background-color: #1f8fff;\n  color: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50rpx;\n  margin-top: 150rpx;\n  font-size: 31rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12331,10 +12410,12 @@ var render = function () {
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(5, "sc"),
-                    staticStyle: { color: "#cc7059" },
+                    staticStyle: { "font-size": "38rpx", color: "#cc7059" },
                     attrs: { _i: 5 },
                   }),
-                  _c("p", { attrs: { _i: 6 } }, [_vm._v("1352256671")]),
+                  _c("v-uni-input", {
+                    attrs: { type: "text", placeholder: "1352256671", _i: 6 },
+                  }),
                 ],
                 1
               ),
@@ -12351,10 +12432,12 @@ var render = function () {
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(9, "sc"),
-                    staticStyle: { color: "#3dce6d" },
+                    staticStyle: { "font-size": "38rpx", color: "#3dce6d" },
                     attrs: { _i: 9 },
                   }),
-                  _c("p", { attrs: { _i: 10 } }, [_vm._v("输入验证码")]),
+                  _c("v-uni-input", {
+                    attrs: { type: "text", placeholder: "输入验证码", _i: 10 },
+                  }),
                 ],
                 1
               ),
@@ -12377,10 +12460,16 @@ var render = function () {
                 [
                   _c("uni-icons", {
                     staticClass: _vm._$g(15, "sc"),
-                    staticStyle: { color: "#3dce6d" },
+                    staticStyle: { "font-size": "38rpx", color: "#3dce6d" },
                     attrs: { _i: 15 },
                   }),
-                  _c("p", { attrs: { _i: 16 } }, [_vm._v("请输入新的手机号")]),
+                  _c("v-uni-input", {
+                    attrs: {
+                      type: "text",
+                      placeholder: "请输入新的手机号",
+                      _i: 16,
+                    },
+                  }),
                 ],
                 1
               ),
@@ -13257,7 +13346,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".content {\n  margin: 10rpx;\n}\n.content .item {\n  display: flex;\n  justify-content: space-between;\n  padding: 45rpx 20rpx;\n}\n.content .item p {\n  font-size: 20rpx;\n  font-weight: 800;\n}\n.content .item uni-view {\n  font-size: 18rpx;\n  color: #888888;\n}\n.content .item:not(.item:nth-child(3)) {\n  border-bottom: 1px solid #f4f4f4;\n}\n.content .box-text {\n  width: 100%;\n}\n.content .box-text .text {\n  border: 1rpx solid #dcdcdc;\n  border-radius: 15rpx;\n  padding: 20rpx;\n  width: 94%;\n  height: 130rpx;\n  color: #c8c8c8;\n}\n.picture {\n  width: 90%;\n  height: 100rpx;\n  display: flex;\n}\n.picture .itemm {\n  width: 100rpx;\n  height: 100rpx;\n  border: 1rpx solid #b6b6b6;\n  margin: 40rpx;\n  margin-left: 0;\n  border-radius: 10rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.picture .itemm .chuo {\n  width: 30rpx;\n  height: 30rpx;\n  background-color: #898989;\n  border-radius: 15rpx;\n  position: absolute;\n  top: -10rpx;\n  right: -10rpx;\n  color: #fff;\n  line-height: 30rpx;\n  font-size: 10rpx;\n  display: flex;\n  justify-content: space-between;\n}\n.submit {\n  width: 450rpx;\n  height: 70rpx;\n  margin: 0 auto;\n  border-radius: 30rpx;\n  margin-top: 100rpx;\n  background-color: #1f8fff;\n  color: #fff;\n  text-align: center;\n  line-height: 70rpx;\n}\n", ""]);
+exports.push([module.i, ".content {\n  margin: 10rpx;\n}\n.content .item {\n  display: flex;\n  justify-content: space-between;\n  padding: 45rpx 20rpx;\n}\n.content .item p {\n  font-size: 25rpx;\n}\n.content .item uni-view {\n  font-size: 25rpx;\n  color: #888888;\n}\n.content .item:not(.item:nth-child(3)) {\n  border-bottom: 1px solid #f4f4f4;\n}\n.content .box-text {\n  width: 100%;\n}\n.content .box-text .text {\n  border: 1rpx solid #dcdcdc;\n  border-radius: 15rpx;\n  padding: 20rpx;\n  width: 94%;\n  height: 130rpx;\n  color: #c8c8c8;\n}\n.picture {\n  width: 90%;\n  height: 100rpx;\n  display: flex;\n}\n.picture .itemm {\n  width: 100rpx;\n  height: 100rpx;\n  border: 1rpx solid #b6b6b6;\n  margin: 40rpx;\n  margin-left: 0;\n  border-radius: 10rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.picture .itemm .chuo {\n  width: 30rpx;\n  height: 30rpx;\n  background-color: #898989;\n  border-radius: 15rpx;\n  position: absolute;\n  top: -10rpx;\n  right: -10rpx;\n  color: #fff;\n  line-height: 30rpx;\n  font-size: 10rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.submit {\n  width: 450rpx;\n  height: 70rpx;\n  margin: 0 auto;\n  border-radius: 30rpx;\n  margin-top: 100rpx;\n  background-color: #1f8fff;\n  color: #fff;\n  text-align: center;\n  line-height: 70rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -13393,7 +13482,7 @@ var render = function () {
                 "uni-view",
                 { attrs: { _i: 5 } },
                 [
-                  _vm._v("请选择保修类型"),
+                  _vm._v("请选择反馈类型"),
                   _c("uni-icons", { attrs: { _i: 6 } }),
                 ],
                 1
@@ -13405,7 +13494,7 @@ var render = function () {
             "uni-view",
             { staticClass: _vm._$g(7, "sc"), attrs: { _i: 7 } },
             [
-              _c("p", { attrs: { _i: 8 } }, [_vm._v("报修地址")]),
+              _c("p", { attrs: { _i: 8 } }, [_vm._v("反馈地址")]),
               _c(
                 "uni-view",
                 { attrs: { _i: 9 } },
@@ -13441,7 +13530,7 @@ var render = function () {
                 attrs: {
                   cols: "10",
                   rows: "10",
-                  placeholder: "请输入报修问题，以便维修人员尽快为您解决",
+                  placeholder: "请输入反馈问题，以便维修人员尽快为您解决",
                   _i: 16,
                 },
               }),
@@ -13626,7 +13715,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".content {\n  margin: 10rpx;\n}\n.content .item {\n  display: flex;\n  justify-content: space-between;\n  padding: 45rpx 20rpx;\n}\n.content .item p {\n  font-size: 20rpx;\n  font-weight: 800;\n}\n.content .item uni-view {\n  font-size: 18rpx;\n  color: #888888;\n}\n.content .item:not(.item:nth-child(3)) {\n  border-bottom: 1px solid #f4f4f4;\n}\n.content .box-text {\n  width: 100%;\n}\n.content .box-text .text {\n  border: 1rpx solid #dcdcdc;\n  border-radius: 15rpx;\n  padding: 20rpx;\n  width: 94%;\n  height: 130rpx;\n  color: #c8c8c8;\n}\n.picture {\n  width: 90%;\n  height: 100rpx;\n  display: flex;\n}\n.picture .item {\n  width: 100rpx;\n  height: 100rpx;\n  border: 1rpx solid #b6b6b6;\n  margin: 40rpx;\n  margin-left: 0;\n  border-radius: 10rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.picture .item .chuo {\n  width: 30rpx;\n  height: 30rpx;\n  background-color: #898989;\n  border-radius: 15rpx;\n  position: absolute;\n  top: -10rpx;\n  right: -10rpx;\n  color: #fff;\n  line-height: 30rpx;\n  font-size: 10rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.submit {\n  width: 450rpx;\n  height: 70rpx;\n  margin: 0 auto;\n  border-radius: 30rpx;\n  margin-top: 100rpx;\n  background-color: #1f8fff;\n  color: #fff;\n  text-align: center;\n  line-height: 70rpx;\n}\n", ""]);
+exports.push([module.i, ".content {\n  margin: 10rpx;\n}\n.content .item {\n  display: flex;\n  justify-content: space-between;\n  padding: 45rpx 20rpx;\n}\n.content .item p {\n  font-size: 25rpx;\n}\n.content .item uni-view {\n  font-size: 25rpx;\n  color: #888888;\n}\n.content .item:not(.item:nth-child(3)) {\n  border-bottom: 1px solid #f4f4f4;\n}\n.content .box-text {\n  width: 100%;\n}\n.content .box-text .text {\n  border: 1rpx solid #dcdcdc;\n  border-radius: 15rpx;\n  padding: 20rpx;\n  width: 94%;\n  height: 130rpx;\n  color: #c8c8c8;\n}\n.picture {\n  width: 90%;\n  height: 100rpx;\n  display: flex;\n}\n.picture .itemm {\n  width: 100rpx;\n  height: 100rpx;\n  border: 1rpx solid #b6b6b6;\n  margin: 40rpx;\n  margin-left: 0;\n  border-radius: 10rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.picture .itemm .chuo {\n  width: 30rpx;\n  height: 30rpx;\n  background-color: #898989;\n  border-radius: 15rpx;\n  position: absolute;\n  top: -10rpx;\n  right: -10rpx;\n  color: #fff;\n  line-height: 30rpx;\n  font-size: 10rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.submit {\n  width: 450rpx;\n  height: 70rpx;\n  margin: 0 auto;\n  border-radius: 30rpx;\n  margin-top: 100rpx;\n  background-color: #1f8fff;\n  color: #fff;\n  text-align: center;\n  line-height: 70rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -15270,7 +15359,7 @@ var render = function () {
                         "uni-view",
                         {
                           staticStyle: {
-                            border: "0.1rpx solid #666666",
+                            border: "0.1rpx solid #888888",
                             color: "#666666",
                           },
                           attrs: { _i: 21 },
@@ -15283,6 +15372,7 @@ var render = function () {
                           staticStyle: {
                             "background-color": "#01a2f2",
                             color: "#fff",
+                            border: "1px solid #01a2f2",
                           },
                           attrs: { _i: 22 },
                         },
@@ -15386,7 +15476,7 @@ var render = function () {
                         "uni-view",
                         {
                           staticStyle: {
-                            border: "0.1rpx solid #666666",
+                            border: "0.1rpx solid #888888",
                             color: "#666666",
                           },
                           attrs: { _i: 37 },
@@ -15399,6 +15489,7 @@ var render = function () {
                           staticStyle: {
                             "background-color": "#01a2f2",
                             color: "#fff",
+                            border: "1px solid #01a2f2",
                           },
                           attrs: { _i: 38 },
                         },
@@ -15502,7 +15593,7 @@ var render = function () {
                         "uni-view",
                         {
                           staticStyle: {
-                            border: "0.1rpx solid #666666",
+                            border: "0.1rpx solid #888888",
                             color: "#666666",
                           },
                           attrs: { _i: 53 },
@@ -15515,6 +15606,7 @@ var render = function () {
                           staticStyle: {
                             "background-color": "#01a2f2",
                             color: "#fff",
+                            border: "1px solid #01a2f2",
                           },
                           attrs: { _i: 54 },
                         },
@@ -15630,7 +15722,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #f0f0f0;\n}\n.top {\n  width: 100%;\n  height: 200rpx;\n  background-color: #fff;\n}\n.top .buttom {\n  width: 100%;\n  height: 100rpx;\n  line-height: 100rpx;\n  display: flex;\n  justify-content: space-between;\n  font-size: 29rpx;\n}\n.top .buttom .itemm {\n  margin-left: 20rpx;\n  margin-right: 20rpx;\n}\n.item {\n  width: 709rpx;\n  height: 550rpx;\n  background-color: #fff;\n  margin: 0 auto;\n  margin-top: 20rpx;\n  margin-bottom: 20rpx;\n  border: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.item .center {\n  width: 85%;\n  height: 85%;\n}\n.item .center .top {\n  width: 100%;\n  height: 90rpx;\n  font-size: 25rpx;\n  line-height: 40rpx;\n}\n.item .center .centent {\n  width: 100%;\n  height: 270rpx;\n}\n.item .center .centent .centent_top {\n  width: 100%;\n  height: 190rpx;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n}\n.item .center .centent .centent_top uni-image {\n  width: 170rpx;\n  height: 130rpx;\n}\n.item .center .centent .centent_buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  line-height: 75rpx;\n  margin-left: 20rpx;\n  color: #666666;\n  font-size: 25rpx;\n}\n.item .center .centent .centent_buttom .centent_buttom_left {\n  width: 60%;\n  height: 100%;\n}\n.item .center .centent .centent_buttom .centent_buttom_right {\n  width: 40%;\n  height: 100%;\n  text-align: right;\n}\n.item .center .buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  margin-left: 20rpx;\n  border-top: 1rpx solid #f0f0f0;\n  line-height: 90rpx;\n  font-size: 25rpx;\n}\n.item .center .buttom .buttom_left {\n  width: 50%;\n  height: 90rpx;\n}\n.item .center .buttom .buttom_right {\n  width: 40%;\n  height: 80rpx;\n  margin-left: 50rpx;\n  margin-top: 25rpx;\n  text-align: right;\n  display: flex;\n  justify-content: space-between;\n}\n.item .center .buttom .buttom_right uni-view {\n  width: 100rpx;\n  height: 50rpx;\n  text-align: center;\n  line-height: 50rpx;\n  border-radius: 10rpx;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #f0f0f0;\n}\n.top {\n  width: 100%;\n  height: 200rpx;\n  background-color: #fff;\n}\n.top .buttom {\n  width: 100%;\n  height: 100rpx;\n  line-height: 100rpx;\n  display: flex;\n  justify-content: space-between;\n  font-size: 29rpx;\n}\n.top .buttom .itemm {\n  margin-left: 20rpx;\n  margin-right: 20rpx;\n}\n.item {\n  height: 550rpx;\n  background-color: #fff;\n  margin: 20rpx;\n  border: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.item .center {\n  width: 85%;\n  height: 85%;\n}\n.item .center .top {\n  width: 100%;\n  height: 90rpx;\n  font-size: 25rpx;\n  line-height: 40rpx;\n}\n.item .center .centent {\n  width: 100%;\n  height: 270rpx;\n}\n.item .center .centent .centent_top {\n  width: 100%;\n  height: 190rpx;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n}\n.item .center .centent .centent_top uni-image {\n  width: 170rpx;\n  height: 130rpx;\n}\n.item .center .centent .centent_buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  line-height: 75rpx;\n  margin-left: 20rpx;\n  color: #666666;\n  font-size: 25rpx;\n}\n.item .center .centent .centent_buttom .centent_buttom_left {\n  width: 60%;\n  height: 100%;\n}\n.item .center .centent .centent_buttom .centent_buttom_right {\n  width: 40%;\n  height: 100%;\n  text-align: right;\n}\n.item .center .buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  margin-left: 20rpx;\n  border-top: 1rpx solid #f0f0f0;\n  line-height: 90rpx;\n  font-size: 25rpx;\n}\n.item .center .buttom .buttom_left {\n  width: 50%;\n  height: 90rpx;\n}\n.item .center .buttom .buttom_right {\n  width: 40%;\n  height: 80rpx;\n  margin-left: 50rpx;\n  margin-top: 25rpx;\n  text-align: right;\n  display: flex;\n  justify-content: space-between;\n}\n.item .center .buttom .buttom_right uni-view {\n  width: 100rpx;\n  height: 50rpx;\n  text-align: center;\n  line-height: 50rpx;\n  border-radius: 10rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -15988,7 +16080,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #e8ecef;\n}\n.top {\n  width: 100%;\n  height: 70rpx;\n  line-height: 70rpx;\n  color: #666666;\n  font-size: 15rpx;\n  text-indent: 3em;\n}\n.item {\n  width: 100%;\n  padding: 50rpx 0;\n  background-color: #fff;\n  display: flex;\n  justify-content: space-between;\n  border-bottom: 1rpx solid #e8ecef;\n}\n.item .item_left {\n  width: 50%;\n  height: 50%;\n  margin-left: 10rpx;\n  display: flex;\n  align-items: center;\n}\n.item .item_left .tp {\n  width: 115rpx;\n  height: 100rpx;\n}\n.item .item_left .tp uni-image {\n  width: 100rpx;\n  height: 90rpx;\n  border-radius: 50%;\n}\n.item .item_left .wz {\n  width: 150rpx;\n  height: 100rpx;\n}\n.item .item_right {\n  margin-right: 30rpx;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #e8ecef;\n}\n.top {\n  height: 70rpx;\n  text-align: left;\n  line-height: 70rpx;\n  color: #666666;\n  font-size: 25rpx;\n  text-indent: 3em;\n}\n.item {\n  width: 100%;\n  padding: 50rpx 0;\n  background-color: #fff;\n  display: flex;\n  justify-content: space-between;\n  border-bottom: 1rpx solid #e8ecef;\n}\n.item .item_left {\n  width: 50%;\n  height: 50%;\n  margin-left: 10rpx;\n  display: flex;\n  align-items: center;\n}\n.item .item_left .tp {\n  width: 115rpx;\n  height: 100rpx;\n}\n.item .item_left .tp uni-image {\n  width: 100rpx;\n  height: 90rpx;\n  border-radius: 50%;\n}\n.item .item_left .wz {\n  width: 150rpx;\n  height: 100rpx;\n}\n.item .item_right {\n  margin-right: 30rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -16933,9 +17025,18 @@ var render = function () {
         "uni-view",
         { staticClass: _vm._$g(20, "sc"), attrs: { _i: 20 } },
         [
-          _c("v-uni-button", { attrs: { _i: 21 } }, [
-            _vm._v("微信支付￥360.00"),
-          ]),
+          _c(
+            "v-uni-button",
+            {
+              attrs: { _i: 21 },
+              on: {
+                click: function ($event) {
+                  return _vm.$handleViewEvent($event)
+                },
+              },
+            },
+            [_vm._v("微信支付￥360.00")]
+          ),
         ],
         1
       ),
@@ -17037,7 +17138,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #f3f3f3;\n}\n.header {\n  height: 300rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.header .money {\n  color: #fb1c14;\n  font-weight: 800;\n  font-size: 50rpx;\n}\n.header .money span {\n  font-size: 35rpx;\n}\n.content .content-top {\n  background-color: #fff;\n  padding: 35rpx;\n}\n.content .content-items {\n  margin-top: 20rpx;\n}\n.content .content-items .item {\n  background-color: #fff;\n  padding: 30rpx;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.content .content-items .item uni-view {\n  display: flex;\n  align-items: center;\n  width: 200rpx;\n  font-size: 28rpx;\n}\n.content .content-items .item uni-view span {\n  margin-left: 20rpx;\n}\n.but {\n  display: flex;\n  justify-content: center;\n}\n.but uni-button {\n  border-radius: 100rpx;\n  background-color: #f21119;\n  color: #fff;\n  position: fixed;\n  bottom: 120rpx;\n  padding: 10rpx 200rpx;\n  font-size: 25rpx;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #f3f3f3;\n}\n.header {\n  height: 300rpx;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.header .money {\n  color: #fb1c14;\n  font-weight: 800;\n  font-size: 50rpx;\n}\n.header .money span {\n  font-size: 35rpx;\n}\n.content .content-top {\n  background-color: #fff;\n  padding: 35rpx;\n}\n.content .content-items {\n  margin-top: 20rpx;\n}\n.content .content-items .item {\n  background-color: #fff;\n  padding: 30rpx;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.content .content-items .item uni-view {\n  display: flex;\n  align-items: center;\n  width: 200rpx;\n  font-size: 28rpx;\n}\n.content .content-items .item uni-view span {\n  margin-left: 20rpx;\n}\n.but {\n  display: flex;\n  justify-content: center;\n}\n.but uni-button {\n  border-radius: 100rpx;\n  background-color: #f21119;\n  color: #fff;\n  position: relative;\n  bottom: -150rpx;\n  padding: 10rpx 200rpx;\n  font-size: 25rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -17745,7 +17846,7 @@ var render = function () {
                         "uni-view",
                         {
                           staticStyle: {
-                            border: "0.1rpx solid #666666",
+                            border: "0.1rpx solid #888888",
                             color: "#666666",
                           },
                           attrs: { _i: 21 },
@@ -17758,6 +17859,7 @@ var render = function () {
                           staticStyle: {
                             "background-color": "#01a2f2",
                             color: "#fff",
+                            border: "1px solid #01a2f2",
                           },
                           attrs: { _i: 22 },
                         },
@@ -17861,7 +17963,7 @@ var render = function () {
                         "uni-view",
                         {
                           staticStyle: {
-                            border: "0.1rpx solid #666666",
+                            border: "0.1rpx solid #888888",
                             color: "#666666",
                           },
                           attrs: { _i: 37 },
@@ -17874,6 +17976,7 @@ var render = function () {
                           staticStyle: {
                             "background-color": "#01a2f2",
                             color: "#fff",
+                            border: "1px solid #01a2f2",
                           },
                           attrs: { _i: 38 },
                         },
@@ -17977,7 +18080,7 @@ var render = function () {
                         "uni-view",
                         {
                           staticStyle: {
-                            border: "0.1rpx solid #666666",
+                            border: "0.1rpx solid #888888",
                             color: "#666666",
                           },
                           attrs: { _i: 53 },
@@ -17990,6 +18093,7 @@ var render = function () {
                           staticStyle: {
                             "background-color": "#01a2f2",
                             color: "#fff",
+                            border: "1px solid #01a2f2",
                           },
                           attrs: { _i: 54 },
                         },
@@ -18105,7 +18209,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 16);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "body {\n  background-color: #f0f0f0;\n}\n.top {\n  width: 100%;\n  height: 200rpx;\n  background-color: #fff;\n}\n.top .buttom {\n  width: 100%;\n  height: 100rpx;\n  line-height: 100rpx;\n  display: flex;\n  justify-content: space-between;\n  font-size: 29rpx;\n}\n.top .buttom .itemm {\n  margin-left: 20rpx;\n  margin-right: 20rpx;\n}\n.item {\n  width: 709rpx;\n  height: 550rpx;\n  background-color: #fff;\n  margin: 0 auto;\n  margin-top: 20rpx;\n  margin-bottom: 20rpx;\n  border: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.item .center {\n  width: 85%;\n  height: 85%;\n}\n.item .center .top {\n  width: 100%;\n  height: 90rpx;\n  font-size: 25rpx;\n  line-height: 40rpx;\n}\n.item .center .centent {\n  width: 100%;\n  height: 270rpx;\n}\n.item .center .centent .centent_top {\n  width: 100%;\n  height: 190rpx;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n}\n.item .center .centent .centent_top uni-image {\n  width: 170rpx;\n  height: 130rpx;\n}\n.item .center .centent .centent_buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  line-height: 75rpx;\n  margin-left: 20rpx;\n  color: #666666;\n  font-size: 25rpx;\n}\n.item .center .centent .centent_buttom .centent_buttom_left {\n  width: 60%;\n  height: 100%;\n}\n.item .center .centent .centent_buttom .centent_buttom_right {\n  width: 40%;\n  height: 100%;\n  text-align: right;\n}\n.item .center .buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  margin-left: 20rpx;\n  border-top: 1rpx solid #f0f0f0;\n  line-height: 90rpx;\n  font-size: 25rpx;\n}\n.item .center .buttom .buttom_left {\n  width: 50%;\n  height: 90rpx;\n}\n.item .center .buttom .buttom_right {\n  width: 40%;\n  height: 80rpx;\n  margin-left: 50rpx;\n  margin-top: 25rpx;\n  text-align: right;\n  display: flex;\n  justify-content: space-between;\n}\n.item .center .buttom .buttom_right uni-view {\n  width: 100rpx;\n  height: 50rpx;\n  text-align: center;\n  line-height: 50rpx;\n  border-radius: 10rpx;\n}\n", ""]);
+exports.push([module.i, "body {\n  background-color: #f0f0f0;\n}\n.top {\n  width: 100%;\n  height: 200rpx;\n  background-color: #fff;\n}\n.top .buttom {\n  width: 100%;\n  height: 100rpx;\n  line-height: 100rpx;\n  display: flex;\n  justify-content: space-between;\n  font-size: 29rpx;\n}\n.top .buttom .itemm {\n  margin-left: 20rpx;\n  margin-right: 20rpx;\n}\n.item {\n  height: 550rpx;\n  background-color: #fff;\n  margin: 20rpx;\n  border: #fff;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.item .center {\n  width: 85%;\n  height: 85%;\n}\n.item .center .top {\n  width: 100%;\n  height: 90rpx;\n  font-size: 25rpx;\n  line-height: 40rpx;\n}\n.item .center .centent {\n  width: 100%;\n  height: 270rpx;\n}\n.item .center .centent .centent_top {\n  width: 100%;\n  height: 190rpx;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n}\n.item .center .centent .centent_top uni-image {\n  width: 170rpx;\n  height: 130rpx;\n}\n.item .center .centent .centent_buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  line-height: 75rpx;\n  margin-left: 20rpx;\n  color: #666666;\n  font-size: 25rpx;\n}\n.item .center .centent .centent_buttom .centent_buttom_left {\n  width: 60%;\n  height: 100%;\n}\n.item .center .centent .centent_buttom .centent_buttom_right {\n  width: 40%;\n  height: 100%;\n  text-align: right;\n}\n.item .center .buttom {\n  width: 95%;\n  height: 75rpx;\n  display: flex;\n  margin-left: 20rpx;\n  border-top: 1rpx solid #f0f0f0;\n  line-height: 90rpx;\n  font-size: 25rpx;\n}\n.item .center .buttom .buttom_left {\n  width: 50%;\n  height: 90rpx;\n}\n.item .center .buttom .buttom_right {\n  width: 40%;\n  height: 80rpx;\n  margin-left: 50rpx;\n  margin-top: 25rpx;\n  text-align: right;\n  display: flex;\n  justify-content: space-between;\n}\n.item .center .buttom .buttom_right uni-view {\n  width: 100rpx;\n  height: 50rpx;\n  text-align: center;\n  line-height: 50rpx;\n  border-radius: 10rpx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
